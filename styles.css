@@ -167,9 +167,9 @@ a:hover {
 .marker {
   border: none;
   cursor: pointer;
-  height: 56px;
-  width: 56px;
-  background-image: url(marker.png);
+  height: 66px;
+  width: 66px;
+  background-image: url(markerapp.png);
   background-color: rgba(0, 0, 0, 0);
 }
 
