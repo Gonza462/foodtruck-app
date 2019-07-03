@@ -21,6 +21,8 @@ var map = new mapboxgl.Map({
   zoom: 14
 });
 
+map.addControl(new mapboxgl.NavigationControl());
+
 var stores =
   {
     "type": "FeatureCollection",
