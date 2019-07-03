@@ -16,9 +16,9 @@ var map = new mapboxgl.Map({
   // style URL
   style: 'mapbox://styles/mapbox/streets-v11',
   // initial position in [lon, lat] format
-  center: [-77.034084, 38.909671],
+  center: [-87.919848, 43.036623],
   // initial zoom
-  zoom: 14
+  zoom: 12
 });
 
 map.addControl(new mapboxgl.NavigationControl());
@@ -34,8 +34,8 @@ var stores =
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -77.034084142948,
-            38.909671288923
+            -87.909416,
+            43.041069
           ]
         },
         "properties": {
@@ -54,8 +54,8 @@ var stores =
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -77.049766,
-            38.900772
+            -87.903379,
+            43.052681
           ]
         },
         "properties": {
@@ -94,8 +94,8 @@ var stores =
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -77.0672,
-            38.90516896
+            -87.866890,
+            43.072681
           ]
         },
         "properties": {
@@ -114,8 +114,8 @@ var stores =
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -77.002583742142,
-            38.887041080933
+            -87.946490,
+            43.036707
           ]
         },
         "properties": {
@@ -134,8 +134,8 @@ var stores =
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -76.933492720127,
-            38.99225245786
+            -87.911955,
+            43.039634
           ]
         },
         "properties": {
@@ -151,8 +151,8 @@ var stores =
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -77.097083330154,
-            38.980979
+            -87.940095,
+            43.067230
           ]
         },
         "properties": {
@@ -172,7 +172,7 @@ var stores =
           "type": "Point",
           "coordinates": [
             -77.359425054188,
-            38.958058116661
+            43.061963
           ]
         },
         "properties": {
@@ -191,7 +191,7 @@ var stores =
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -77.10853099823,
+            -87.909896,
             38.880100922392
           ]
         },
