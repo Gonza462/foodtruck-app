@@ -167,9 +167,9 @@ a:hover {
 .marker {
   border: none;
   cursor: pointer;
-  height: 66px;
-  width: 66px;
-  background-image: url(markerapp.png);
+  height: 48px;
+  width: 48px;
+  background-image: url(truckmarker.png);
   background-color: rgba(0, 0, 0, 0);
 }
 
