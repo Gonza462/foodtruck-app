@@ -1,3 +1,6 @@
+
+
+
 // This will let you use the .remove() function later on
 if (!('remove' in Element.prototype)) {
   Element.prototype.remove = function() {
@@ -23,7 +26,7 @@ var map = new mapboxgl.Map({
 
 map.addControl(new mapboxgl.NavigationControl());
 map.scrollZoom.disable();
-map.addControl(new mapboxgl.FullscreenControl());
+//map.addControl(new mapboxgl.FullscreenControl());
 
 // Add geolocate control to the map.
 map.addControl(new mapboxgl.GeolocateControl({
@@ -31,7 +34,11 @@ map.addControl(new mapboxgl.GeolocateControl({
     enableHighAccuracy: true
   },
   trackUserLocation: true
-}));
+}),'top-left');
+
+
+
+
 
 
 
