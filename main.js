@@ -12,6 +12,7 @@ if (!('remove' in Element.prototype)) {
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYW5uYS1wIiwiYSI6ImNqb2V1Y29vYjIxMm0zcGxlZ2EyOGR6bzYifQ.dxEq0anALJ7E_Z7RoHH5XQ';
 
+
 // This adds the map to the page
 var map = new mapboxgl.Map({
   // container id specified in the HTML
@@ -56,6 +57,7 @@ var stores =
           ]
         },
         "properties": {
+          "name":"Taqueria Aranda's",
           "phoneFormatted": "(202) 234-7336",
           "phone": "2022347336",
           "address": "1471 P St NW",
@@ -76,6 +78,7 @@ var stores =
           ]
         },
         "properties": {
+          "name": "Taco truck",
           "phoneFormatted": "(202) 507-8357",
           "phone": "2025078357",
           "address": "2221 I St NW",
@@ -96,6 +99,7 @@ var stores =
           ]
         },
         "properties": {
+          "name": "Taco truck",
           "phoneFormatted": "(202) 387-9338",
           "phone": "2023879338",
           "address": "1512 Connecticut Ave NW",
@@ -116,6 +120,7 @@ var stores =
           ]
         },
         "properties": {
+          "name": "Taco truck",
           "phoneFormatted": "(202) 337-9338",
           "phone": "2023379338",
           "address": "3333 M St NW",
@@ -136,6 +141,7 @@ var stores =
           ]
         },
         "properties": {
+          "name": "Taco truck",
           "phoneFormatted": "(202) 547-9338",
           "phone": "2025479338",
           "address": "221 Pennsylvania Ave SE",
@@ -156,6 +162,7 @@ var stores =
           ]
         },
         "properties": {
+          "name": "Taco truck",
           "address": "8204 Baltimore Ave",
           "city": "College Park",
           "country": "United States",
@@ -173,6 +180,7 @@ var stores =
           ]
         },
         "properties": {
+          "name": "Taco truck",
           "phoneFormatted": "(301) 654-7336",
           "phone": "3016547336",
           "address": "4831 Bethesda Ave",
@@ -193,6 +201,7 @@ var stores =
           ]
         },
         "properties": {
+          "name": "Taco truck",
           "phoneFormatted": "(571) 203-0082",
           "phone": "5712030082",
           "address": "11935 Democracy Dr",
@@ -213,6 +222,7 @@ var stores =
           ]
         },
         "properties": {
+          "name": "Taco truck",
           "phoneFormatted": "(703) 522-2016",
           "phone": "7035222016",
           "address": "4075 Wilson Blvd",
@@ -233,6 +243,7 @@ var stores =
           ]
         },
         "properties": {
+          "name": "Taco truck",
           "phoneFormatted": "(610) 642-9400",
           "phone": "6106429400",
           "address": "68 Coulter Ave",
@@ -252,6 +263,7 @@ var stores =
           ]
         },
         "properties": {
+          "name": "Taco truck",
           "phoneFormatted": "(215) 386-1365",
           "phone": "2153861365",
           "address": "3925 Walnut St",
@@ -271,6 +283,7 @@ var stores =
           ]
         },
         "properties": {
+          "name": "Taco truck",
           "phoneFormatted": "(202) 331-3355",
           "phone": "2023313355",
           "address": "1201 L St. NW",
@@ -343,6 +356,8 @@ link.addEventListener('click', function(e) {
   }
 }
 
+
+
 //Function to fly to the correct store
 function flyToStore(currentFeature) {
   map.flyTo({
@@ -359,8 +374,24 @@ function createPopUp(currentFeature) {
 
   var popup = new mapboxgl.Popup({closeOnClick: true})
   .setLngLat(currentFeature.geometry.coordinates)
-  .setHTML('<h3>Sweetgreen</h3>' + '<h4>' + currentFeature.properties.address +'</h4>')
+  .setHTML('<h3>' +currentFeature.properties.name +'</h3>' + '<h4>' + currentFeature.properties.address +'</h4>')
   .addTo(map);
+
+  if(popup.closeOnClick){
+    console.log("true")
+
+  }
+
+
+
+
+
+
+
+
+
+
+
 }
 
 //// Add an event listener for when a user clicks on the map
