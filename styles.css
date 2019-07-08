@@ -122,8 +122,10 @@ a:hover {
 
 .mapboxgl-popup-content {
   font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
-  padding: 0;
+  padding: 0px;
   width: 180px;
+  height: 105px;
+
 }
 
 .mapboxgl-popup-content-wrapper {
@@ -136,6 +138,7 @@ a:hover {
   margin: 0;
   display: block;
   padding: 10px;
+
   border-radius: 3px 3px 0 0;
   font-weight: 700;
   margin-top: -15px;
@@ -144,12 +147,15 @@ a:hover {
 .mapboxgl-popup-content h4 {
   margin: 0;
   display: block;
-  padding: 10px;
+  padding: 0px;
   font-weight: 400;
+  height: 20px;
+
 }
 
 .mapboxgl-popup-content div {
-  padding: 10px;
+
+  padding-bottom: 80px;
 }
 
 .mapboxgl-container .leaflet-marker-icon {
