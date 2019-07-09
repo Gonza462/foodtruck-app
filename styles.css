@@ -198,7 +198,7 @@ a:hover {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 20px 40px;
+  padding: 17px 40px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -211,7 +211,9 @@ a:hover {
 .navbar a.active {
   color: white;
 }
-
+.men{
+    background:red;
+}
 .main {
   padding: 16px;
   margin-bottom: 30px;
