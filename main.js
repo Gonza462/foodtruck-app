@@ -35,7 +35,7 @@ map.addControl(new mapboxgl.GeolocateControl({
     enableHighAccuracy: true
   },
   trackUserLocation: true
-}),'top-left');
+}),'top-right');
 
 
 
