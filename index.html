@@ -6,9 +6,13 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
 		<link rel = "stylesheet" type = "text/css" href = "styles.css" />
+        <link rel = "stylesheet" type = "text/css" href = "menu.css" />
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
         <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.js'></script>
         <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.css' type='text/css' />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Capriola'>
     </head>
     <body>
     <div class='sidebar'>
@@ -18,17 +22,82 @@
         <div id='listings' class='listings'></div>
     </div>
 
-    <div id='map' class='map pad2'>
-    </div>
+    <div id='map' class='map pad2'></div>
 
 
 
     <i id="burger" class="material-icons" onclick="burger()">menu</i>
     <i id="quit" class="material-icons" onclick="quit()">back</i>
     <div id="links">
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Contact</a>
+
+
+        <div class="menu-item">
+            <div class="container">
+                <div class="icon"><span class="ion-icecream"></span></div>
+                <div class="title">icecream </div>
+                <div class="arrow"><span class="ion-chevron-right"></span></div>
+                <div class="rating -r2">
+                    <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                    <div class="text">56 Votes</div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="container">
+                <div class="icon"><span class="ion-pizza"></span></div>
+                <div class="title">pizza</div>
+                <div class="arrow"><span class="ion-chevron-right"></span></div>
+                <div class="rating -r5">
+                    <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                    <div class="text">786 Votes</div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="container">
+                <div class="icon"><span class="ion-beer"></span></div>
+                <div class="title">beer</div>
+                <div class="arrow"><span class="ion-chevron-right"></span></div>
+                <div class="rating -r4">
+                    <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                    <div class="text">71 Votes</div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="container">
+                <div class="icon"><span class="ion-ios-wineglass"></span></div>
+                <div class="title">wine</div>
+                <div class="arrow"><span class="ion-chevron-right"></span></div>
+                <div class="rating -r4">
+                    <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                    <div class="text">26 Votes</div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="container">
+                <div class="icon"><span class="ion-coffee"></span></div>
+                <div class="title">coffee</div>
+                <div class="arrow"><span class="ion-chevron-right"></span></div>
+                <div class="rating -r2">
+                    <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                    <div class="text">125 Votes</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
     <script >function burger(){
         var burger = document.getElementById('burger');
@@ -95,6 +164,7 @@
             padding: 16px;
             display: none;
             cursor: pointer;
+            z-index:9999999999;
         }
 
         #links{
