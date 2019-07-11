@@ -25,17 +25,19 @@ var map = new mapboxgl.Map({
   zoom: 12
 });
 
-map.addControl(new mapboxgl.NavigationControl());
+//map.addControl(new mapboxgl.NavigationControl());
 map.scrollZoom.disable();
 //map.addControl(new mapboxgl.FullscreenControl());
 
 // Add geolocate control to the map.
+/*
 map.addControl(new mapboxgl.GeolocateControl({
   positionOptions: {
     enableHighAccuracy: true
   },
   trackUserLocation: true
-}),'top-right');
+}),'top-left');
+*/
 
 
 
