@@ -29,19 +29,38 @@
     <i id="burger" class="material-icons" onclick="burger()">menu</i>
     <i id="quit" class="material-icons" onclick="quit()">back</i>
     <div id="links">
-
-
-        <div class="menu-item">
+        <div class="menu-items">
             <div class="container">
-                <div class="icon"><span class="ion-icecream"></span></div>
-                <div class="title">icecream </div>
-                <div class="arrow"><span class="ion-chevron-right"></span></div>
+
                 <div class="rating -r2">
                     <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
                     <div class="text">56 Votes</div>
                 </div>
             </div>
         </div>
+
+            <div class="menu-item">
+                <div class="container">
+                    <div class="icon"><span class="ion-icecream"></span></div>
+                    <div class="title">icecream </div>
+                    <div class="arrow"><span class="ion-chevron-right"></span></div>
+                    <div class="rating -r2">
+                        <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                        <div class="text">56 Votes</div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="container">
+                    <div class="icon"><span class="ion-pizza"></span></div>
+                    <div class="title">pizza</div>
+                    <div class="arrow"><span class="ion-chevron-right"></span></div>
+                    <div class="rating -r5">
+                        <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                        <div class="text">786 Votes</div>
+                    </div>
+                </div>
+            </div>
         <div class="menu-item">
             <div class="container">
                 <div class="icon"><span class="ion-pizza"></span></div>
@@ -86,14 +105,17 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
+        <div class="menu-item">
+            <div class="container">
+                <div class="icon"><span class="ion-icecream"></span></div>
+                <div class="title">icecream </div>
+                <div class="arrow"><span class="ion-chevron-right"></span></div>
+                <div class="rating -r2">
+                    <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                    <div class="text">56 Votes</div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -157,7 +179,7 @@
         }
 
         #quit{
-            position: fixed;
+            position: sticky;
             top: 0;
             color: white;
             font-size: 32px;
@@ -165,6 +187,8 @@
             display: none;
             cursor: pointer;
             z-index:9999999999;
+            padding-left: 175px;
+
         }
 
         #links{
