@@ -136,7 +136,7 @@ a:hover {
   padding: 1%;
 }
 
-.mapboxgl-popup-content h3 {
+.mapboxgl-popup-content h4 {
 
   color: #fff;
   margin: 0;
@@ -150,7 +150,7 @@ a:hover {
 
 .mapboxgl-popup-content h4 {
   margin: 0;
-  display: block;
+  display: table;
   padding: 0px;
   font-weight: 400;
   height: 20px;

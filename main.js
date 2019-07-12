@@ -377,7 +377,7 @@ function createPopUp(currentFeature) {
 
   var popup = new mapboxgl.Popup({closeOnClick: true})
       .setLngLat(currentFeature.geometry.coordinates)
-      .setHTML('<h3>' + currentFeature.properties.name +'</h3>' +
+      .setHTML('<h4>' + currentFeature.properties.name +'</h4>' +
           '<button onclick = window.location.assign("http://maps.google.com/maps?saddr=43.077457,-87.882252&daddr=43.090138,-87.976349") type="button" class="btn btn-success">' + 'Go' +
           '</button>'+
           '<button  type="button" class="btn btn-dark">' + 'Menu' +
