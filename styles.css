@@ -122,10 +122,13 @@ a:hover {
 }
 
 .mapboxgl-popup-content {
-  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
-  padding: 0px;
-  width: 180px;
-  height: 105px;
+
+  position: relative;
+  background: #00000094;
+  border-radius: 17px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 10px 10px 15px;
+  pointer-events: auto;
 
 }
 
@@ -134,7 +137,7 @@ a:hover {
 }
 
 .mapboxgl-popup-content h3 {
-  background: #e83e2a;
+
   color: #fff;
   margin: 0;
   display: block;
