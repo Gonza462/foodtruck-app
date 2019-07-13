@@ -25,7 +25,7 @@ var map = new mapboxgl.Map({
   zoom: 12
 });
 
-//map.addControl(new mapboxgl.NavigationControl());
+map.addControl(new mapboxgl.NavigationControl());
 map.scrollZoom.disable();
 //map.addControl(new mapboxgl.FullscreenControl());
 
