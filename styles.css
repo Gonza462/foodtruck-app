@@ -28,6 +28,10 @@ a {
 a:hover {
   color: #101010;
 }
+a.mapboxgl-ctrl-logo{
+  display: contents;
+}
+
 
 .sidebar {
   position: absolute;
