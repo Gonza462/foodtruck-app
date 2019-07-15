@@ -156,7 +156,7 @@ a.mapboxgl-ctrl-logo{
 
 .mapboxgl-popup-content h4 {
   margin: 0;
-  display: table;
+ /* display: table;*/
   padding: 0px;
   font-weight: 400;
   height: 20px;

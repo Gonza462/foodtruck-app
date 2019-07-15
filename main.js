@@ -384,7 +384,9 @@ function createPopUp(currentFeature) {
             '<div className="card-body">'+
               '<h4 className="card-title">'+'Taco Truck'+'</h4>'+
               '<p className="card-text">'+'</p>'+
-              '<a href=http://maps.google.com/maps?saddr=43.077457,-87.882252&daddr=43.090138,-87.976349 className="btn btn-primary stretched-link">'+'directions'+'</a>'+
+          '<button onclick = window.location.assign("http://maps.google.com/maps?saddr=43.077457,-87.882252&daddr=43.090138,-87.976349") type="button" class="btn btn-success" style="margin-right: 10px">' + 'Go' +
+          '</button>'+
+          '<button  type="button" class="btn btn-dark" style="background-color: red">' + 'Menu' + '</button>'+
             '</div>'+
         '</div>'+
       '</div>'
