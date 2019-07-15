@@ -377,13 +377,17 @@ function createPopUp(currentFeature) {
 
   var popup = new mapboxgl.Popup({closeOnClick: true})
       .setLngLat(currentFeature.geometry.coordinates)
-      .setHTML('<h4>' + currentFeature.properties.name +'</h4>' +
-          '<button onclick = window.location.assign("http://maps.google.com/maps?saddr=43.077457,-87.882252&daddr=43.090138,-87.976349") type="button" class="btn btn-success">' + 'Go' +
-          '</button>'+
-          '<button  type="button" class="btn btn-dark">' + 'Menu' +
-              '</button>'
+      .setHTML('<div className="container">'+
 
-
+        '<div className="card" style="width:200px">'+
+          '<img className="card-img-top" src="IndulgeIndiaTruck.jpg" alt="Card image" style="width:100%">'+
+            '<div className="card-body">'+
+              '<h4 className="card-title">'+'Taco Truck'+'</h4>'+
+              '<p className="card-text">'+'</p>'+
+              '<a href="#" className="btn btn-primary stretched-link">'+'See menu'+'</a>'+
+            '</div>'+
+        '</div>'+
+      '</div>'
 
 
       )
