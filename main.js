@@ -379,7 +379,7 @@ function createPopUp(currentFeature) {
       .setLngLat(currentFeature.geometry.coordinates)
       .setHTML('<div className="container">'+
 
-        '<div className="card" style="width:200px">'+
+        '<div className="card" style="width:140px">'+
           '<img className="card-img-top" src="IndulgeIndiaTruck.jpg" alt="Card image" style="width:100%">'+
             '<div className="card-body">'+
               '<h4 className="card-title">'+'Taco Truck'+'</h4>'+
