@@ -33,6 +33,7 @@ body {
     width: 100%;
     color: #FBFBFB;
     transition: all 210ms cubic-bezier(.8, .1, .2, .9);
+    z-index: 2;
 }
 
 .menu-item:nth-of-type(5n + 1) { background: #3E989B;   }

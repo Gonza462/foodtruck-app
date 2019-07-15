@@ -26,51 +26,89 @@
         <div id='listings' class='listings'></div>
     </div>
 
-    <div id='map' class='map pad2'></div>
+    <div id='map' class='map pad2'>
 
 
+        <i id="burger" class="material-icons" onclick="burger()">menu</i>
+        <i id="quit" class="material-icons" onclick="quit()">back</i>
+        <div id="links">
+            <div class="amazing-menu">
 
-    <i id="burger" class="material-icons" onclick="burger()">menu</i>
-    <i id="quit" class="material-icons" onclick="quit()">back</i>
-    <div id="links">
-        <div class="amazing-menu">
-
-            <div class="menu-item">
-                <div class="container">
-                    <div class="icon"><span class="ion-icecream"></span></div>
-                    <div class="title">jamaican truck </div>
-                    <div class="arrow"><span class="ion-chevron-right"></span></div>
-                    <div class="rating -r2">
-                        <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
-                        <div class="text">56 Votes</div>
+                <div class="menu-item">
+                    <div class="container">
+                        <div class="icon"><span class="ion-icecream"></span></div>
+                        <div class="title">jamaican truck </div>
+                        <div class="arrow"><span class="ion-chevron-right"></span></div>
+                        <div class="rating -r2">
+                            <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                            <div class="text">56 Votes</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="container">
+                        <div class="icon"><span class="ion-pizza"></span></div>
+                        <div class="title">taco truck</div>
+                        <div class="arrow"><span class="ion-chevron-right"></span></div>
+                        <div class="rating -r5">
+                            <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                            <div class="text">786 Votes</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="container">
+                        <div class="icon"><span class="ion-beer"></span></div>
+                        <div class="title">bbq truck</div>
+                        <div class="arrow"><span class="ion-chevron-right"></span></div>
+                        <div class="rating -r4">
+                            <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                            <div class="text">71 Votes</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="container">
+                        <div class="icon"><span class="ion-beer"></span></div>
+                        <div class="title">beer</div>
+                        <div class="arrow"><span class="ion-chevron-right"></span></div>
+                        <div class="rating -r4">
+                            <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                            <div class="text">71 Votes</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="container">
+                        <div class="icon"><span class="ion-ios-wineglass"></span></div>
+                        <div class="title">wine</div>
+                        <div class="arrow"><span class="ion-chevron-right"></span></div>
+                        <div class="rating -r4">
+                            <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                            <div class="text">26 Votes</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="container">
+                        <div class="icon"><span class="ion-coffee"></span></div>
+                        <div class="title">coffee</div>
+                        <div class="arrow"><span class="ion-chevron-right"></span></div>
+                        <div class="rating -r2">
+                            <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                            <div class="text">125 Votes</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="menu-item">
-                <div class="container">
-                    <div class="icon"><span class="ion-pizza"></span></div>
-                    <div class="title">taco truck</div>
-                    <div class="arrow"><span class="ion-chevron-right"></span></div>
-                    <div class="rating -r5">
-                        <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
-                        <div class="text">786 Votes</div>
-                    </div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="container">
-                    <div class="icon"><span class="ion-beer"></span></div>
-                    <div class="title">bbq truck</div>
-                    <div class="arrow"><span class="ion-chevron-right"></span></div>
-                    <div class="rating -r4">
-                        <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
-                        <div class="text">71 Votes</div>
-                    </div>
-                </div>
-            </div>
+
         </div>
 
+
+
     </div>
+
+
     <script >function burger(){
         var burger = document.getElementById('burger');
         var links = document.getElementById('links');
@@ -126,6 +164,7 @@
             border-radius: 0% 0% 69% 0%;
             transition: 0.5s;
             cursor: pointer;
+            z-index:1;
         }
 
         #quit{
@@ -149,6 +188,7 @@
             padding: 25vh 0;
             justify-content: space-around;
             z-index: 9998;
+            overflow: scroll;
         }
 
         #links a{
@@ -158,6 +198,84 @@
             font-size: 2em;
             font-family: 'Roboto';
             z-index: 10;
-        }</style>
+
+        }
+
+
+
+        .amazing-menu{
+            background-color: red;
+        }
+
+        /* Ibrahim Jabbari -- www.ibrahimjabbari.com */
+        @import url(https://fonts.googleapis.com/css?family=Arvo:700);
+        @import url(https://fonts.googleapis.com/css?family=Seaweed+Script);
+        body {
+            background-color: #222;
+        }
+        .plate {
+            width: 410px;
+            margin: 10% auto;
+        }
+        .shadow {
+            color: #fff;
+            font-family: Arvo;
+            font-weight: bold;
+            text-shadow:
+                    -3px -3px 0 #222,
+                    3px -3px 0 #222,
+                    -3px 3px 0 #222,
+                    3px 3px 0 #222,
+                    4px 4px 0 #fff,
+                    5px 5px 0 #fff,
+                    6px 6px 0 #fff,
+                    7px 7px 0 #fff;
+            line-height: 0.8em;
+            letter-spacing: 0.1em;
+            transform: scaleY(0.7);
+            -webkit-transform: scaleY(0.7);
+            -moz-transform: scaleY(0.7);
+            margin:0;
+            text-align: center;
+        }
+        .script {
+            font-family: "Seaweed Script";
+            color: #fff;
+            text-align: center;
+            font-size: 40px;
+            position: relative;
+            margin:0;
+        }
+        .script span {
+            background-color: #e83e2a;
+            padding: 0 0.3em;
+        }
+        .script:before {
+            content:"";
+            display: block;
+            position: absolute;
+            z-index:-1;
+            top: 50%;
+            width: 100%;
+            border-bottom: 3px solid #fff;
+        }
+        .text1 {
+            font-size: 20px;
+        }
+        .text2 {
+            font-size: 20px;
+        }
+        .text3 {
+            font-size: 20px;
+        }
+        .mapboxgl-ctrl-top-right {
+            top: 0;
+            z-index: 0;
+            right: 0;
+        }
+
+
+
+    </style>
 
 </html>
