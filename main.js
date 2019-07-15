@@ -384,7 +384,7 @@ function createPopUp(currentFeature) {
             '<div className="card-body">'+
               '<h4 className="card-title">'+'Taco Truck'+'</h4>'+
               '<p className="card-text">'+'</p>'+
-              '<a href="#" className="btn btn-primary stretched-link">'+'See menu'+'</a>'+
+              '<a href=http://maps.google.com/maps?saddr=43.077457,-87.882252&daddr=43.090138,-87.976349 className="btn btn-primary stretched-link">'+'directions'+'</a>'+
             '</div>'+
         '</div>'+
       '</div>'
