@@ -226,6 +226,11 @@ a.mapboxgl-ctrl-logo{
   margin-bottom: 30px;
 }
 
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl{
+  margin:27px 10px 0 0;
+  float: right;
+}
+
 
 
 

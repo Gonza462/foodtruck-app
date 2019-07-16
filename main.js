@@ -23,7 +23,7 @@ var map = new mapboxgl.Map({
   // initial position in [lon, lat] format
   center: [-87.919848, 43.036623],
   // initial zoom
-  zoom: 12
+  zoom: 11
 });
 
 map.on("load", function() {
