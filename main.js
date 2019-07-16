@@ -10,7 +10,8 @@ if (!('remove' in Element.prototype)) {
   };
 }
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYW5uYS1wIiwiYSI6ImNqb2V1Y29vYjIxMm0zcGxlZ2EyOGR6bzYifQ.dxEq0anALJ7E_Z7RoHH5XQ';
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ29uemE0NjIiLCJhIjoiY2ppZmRieXk2MGxodDNxb2N2ZzVzbWFvZCJ9.1htrThMOpVkVcrWlHg2Bbg';
 
 
 // This adds the map to the page
@@ -18,18 +19,35 @@ var map = new mapboxgl.Map({
   // container id specified in the HTML
   container: 'map',
   // style URL
-  style: 'mapbox://styles/mapbox/streets-v11',
+  style: 'mapbox://styles/gonza462/cjy5xxr440uvz1cn2wt9u4n8m',
   // initial position in [lon, lat] format
   center: [-87.919848, 43.036623],
   // initial zoom
   zoom: 12
 });
 
+map.on("load", function() {
+  var heatmap = new HexgridHeatmap(map, "hexgrid-heatmap", "waterway-label");
+
+  heatmap.setIntensity(15);
+  heatmap.setSpread(0.3);
+  heatmap.setData(sightseeingPOIs);
+  heatmap.update();
+  heatmap.setColorStops([
+    [0, "rgba(0,185,243,0)"],
+    [50, "rgba(0,185,243,0.5)"],
+    [130, "rgba(255,223,0,0.6)"],
+    [200, "rgba(255,105,0,0.6)"]
+  ])
+});
+
+
+
 map.addControl(new mapboxgl.NavigationControl());
 map.scrollZoom.disable();
 //map.addControl(new mapboxgl.FullscreenControl());
 
- //Add geolocate control to the map.
+//Add geolocate control to the map.
 
 map.addControl(new mapboxgl.GeolocateControl({
   positionOptions: {
@@ -46,265 +64,265 @@ map.addControl(new mapboxgl.GeolocateControl({
 
 
 var stores =
-  {
-    "type": "FeatureCollection",
-    "features": [
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -87.909416,
-            43.041069
-          ]
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -87.909416,
+              43.041069
+            ]
+          },
+          "properties": {
+            "name":"Taqueria Aranda's",
+            "phoneFormatted": "(202) 234-7336",
+            "phone": "2022347336",
+            "address": "1471 P St NW",
+            "city": "Washington DC",
+            "country": "United States",
+            "crossStreet": "at 15th St NW",
+            "postalCode": "20005",
+            "state": "D.C."
+          }
         },
-        "properties": {
-          "name":"Taqueria Aranda's",
-          "phoneFormatted": "(202) 234-7336",
-          "phone": "2022347336",
-          "address": "1471 P St NW",
-          "city": "Washington DC",
-          "country": "United States",
-          "crossStreet": "at 15th St NW",
-          "postalCode": "20005",
-          "state": "D.C."
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -87.903379,
-            43.052681
-          ]
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -87.903379,
+              43.052681
+            ]
+          },
+          "properties": {
+            "name": "Taco truck",
+            "phoneFormatted": "(202) 507-8357",
+            "phone": "2025078357",
+            "address": "2221 I St NW",
+            "city": "Washington DC",
+            "country": "United States",
+            "crossStreet": "at 22nd St NW",
+            "postalCode": "20037",
+            "state": "D.C."
+          }
         },
-        "properties": {
-          "name": "Taco truck",
-          "phoneFormatted": "(202) 507-8357",
-          "phone": "2025078357",
-          "address": "2221 I St NW",
-          "city": "Washington DC",
-          "country": "United States",
-          "crossStreet": "at 22nd St NW",
-          "postalCode": "20037",
-          "state": "D.C."
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -77.043929,
-            38.910525
-          ]
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -77.043929,
+              38.910525
+            ]
+          },
+          "properties": {
+            "name": "Taco truck",
+            "phoneFormatted": "(202) 387-9338",
+            "phone": "2023879338",
+            "address": "1512 Connecticut Ave NW",
+            "city": "Washington DC",
+            "country": "United States",
+            "crossStreet": "at Dupont Circle",
+            "postalCode": "20036",
+            "state": "D.C."
+          }
         },
-        "properties": {
-          "name": "Taco truck",
-          "phoneFormatted": "(202) 387-9338",
-          "phone": "2023879338",
-          "address": "1512 Connecticut Ave NW",
-          "city": "Washington DC",
-          "country": "United States",
-          "crossStreet": "at Dupont Circle",
-          "postalCode": "20036",
-          "state": "D.C."
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -87.866890,
-            43.072681
-          ]
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -87.866890,
+              43.072681
+            ]
+          },
+          "properties": {
+            "name": "Taco truck",
+            "phoneFormatted": "(202) 337-9338",
+            "phone": "2023379338",
+            "address": "3333 M St NW",
+            "city": "Washington DC",
+            "country": "United States",
+            "crossStreet": "at 34th St NW",
+            "postalCode": "20007",
+            "state": "D.C."
+          }
         },
-        "properties": {
-          "name": "Taco truck",
-          "phoneFormatted": "(202) 337-9338",
-          "phone": "2023379338",
-          "address": "3333 M St NW",
-          "city": "Washington DC",
-          "country": "United States",
-          "crossStreet": "at 34th St NW",
-          "postalCode": "20007",
-          "state": "D.C."
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -87.946490,
-            43.036707
-          ]
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -87.946490,
+              43.036707
+            ]
+          },
+          "properties": {
+            "name": "Taco truck",
+            "phoneFormatted": "(202) 547-9338",
+            "phone": "2025479338",
+            "address": "221 Pennsylvania Ave SE",
+            "city": "Washington DC",
+            "country": "United States",
+            "crossStreet": "btwn 2nd & 3rd Sts. SE",
+            "postalCode": "20003",
+            "state": "D.C."
+          }
         },
-        "properties": {
-          "name": "Taco truck",
-          "phoneFormatted": "(202) 547-9338",
-          "phone": "2025479338",
-          "address": "221 Pennsylvania Ave SE",
-          "city": "Washington DC",
-          "country": "United States",
-          "crossStreet": "btwn 2nd & 3rd Sts. SE",
-          "postalCode": "20003",
-          "state": "D.C."
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -87.911955,
-            43.039634
-          ]
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -87.911955,
+              43.039634
+            ]
+          },
+          "properties": {
+            "name": "Taco truck",
+            "address": "8204 Baltimore Ave",
+            "city": "College Park",
+            "country": "United States",
+            "postalCode": "20740",
+            "state": "MD"
+          }
         },
-        "properties": {
-          "name": "Taco truck",
-          "address": "8204 Baltimore Ave",
-          "city": "College Park",
-          "country": "United States",
-          "postalCode": "20740",
-          "state": "MD"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -87.940095,
-            43.067230
-          ]
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -87.940095,
+              43.067230
+            ]
+          },
+          "properties": {
+            "name": "Taco truck",
+            "phoneFormatted": "(301) 654-7336",
+            "phone": "3016547336",
+            "address": "4831 Bethesda Ave",
+            "cc": "US",
+            "city": "Bethesda",
+            "country": "United States",
+            "postalCode": "20814",
+            "state": "MD"
+          }
         },
-        "properties": {
-          "name": "Taco truck",
-          "phoneFormatted": "(301) 654-7336",
-          "phone": "3016547336",
-          "address": "4831 Bethesda Ave",
-          "cc": "US",
-          "city": "Bethesda",
-          "country": "United States",
-          "postalCode": "20814",
-          "state": "MD"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -77.359425054188,
-            43.061963
-          ]
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -77.359425054188,
+              43.061963
+            ]
+          },
+          "properties": {
+            "name": "Taco truck",
+            "phoneFormatted": "(571) 203-0082",
+            "phone": "5712030082",
+            "address": "11935 Democracy Dr",
+            "city": "Reston",
+            "country": "United States",
+            "crossStreet": "btw Explorer & Library",
+            "postalCode": "20190",
+            "state": "VA"
+          }
         },
-        "properties": {
-          "name": "Taco truck",
-          "phoneFormatted": "(571) 203-0082",
-          "phone": "5712030082",
-          "address": "11935 Democracy Dr",
-          "city": "Reston",
-          "country": "United States",
-          "crossStreet": "btw Explorer & Library",
-          "postalCode": "20190",
-          "state": "VA"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -87.909896,
-            38.880100922392
-          ]
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -87.909896,
+              38.880100922392
+            ]
+          },
+          "properties": {
+            "name": "Taco truck",
+            "phoneFormatted": "(703) 522-2016",
+            "phone": "7035222016",
+            "address": "4075 Wilson Blvd",
+            "city": "Arlington",
+            "country": "United States",
+            "crossStreet": "at N Randolph St.",
+            "postalCode": "22203",
+            "state": "VA"
+          }
         },
-        "properties": {
-          "name": "Taco truck",
-          "phoneFormatted": "(703) 522-2016",
-          "phone": "7035222016",
-          "address": "4075 Wilson Blvd",
-          "city": "Arlington",
-          "country": "United States",
-          "crossStreet": "at N Randolph St.",
-          "postalCode": "22203",
-          "state": "VA"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -75.28784,
-            40.008008
-          ]
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -75.28784,
+              40.008008
+            ]
+          },
+          "properties": {
+            "name": "Taco truck",
+            "phoneFormatted": "(610) 642-9400",
+            "phone": "6106429400",
+            "address": "68 Coulter Ave",
+            "city": "Ardmore",
+            "country": "United States",
+            "postalCode": "19003",
+            "state": "PA"
+          }
         },
-        "properties": {
-          "name": "Taco truck",
-          "phoneFormatted": "(610) 642-9400",
-          "phone": "6106429400",
-          "address": "68 Coulter Ave",
-          "city": "Ardmore",
-          "country": "United States",
-          "postalCode": "19003",
-          "state": "PA"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -75.20121216774,
-            39.954030175164
-          ]
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -75.20121216774,
+              39.954030175164
+            ]
+          },
+          "properties": {
+            "name": "Taco truck",
+            "phoneFormatted": "(215) 386-1365",
+            "phone": "2153861365",
+            "address": "3925 Walnut St",
+            "city": "Philadelphia",
+            "country": "United States",
+            "postalCode": "19104",
+            "state": "PA"
+          }
         },
-        "properties": {
-          "name": "Taco truck",
-          "phoneFormatted": "(215) 386-1365",
-          "phone": "2153861365",
-          "address": "3925 Walnut St",
-          "city": "Philadelphia",
-          "country": "United States",
-          "postalCode": "19104",
-          "state": "PA"
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -7.043959498405,
+              38.903883387232
+            ]
+          },
+          "properties": {
+            "name": "Taco truck",
+            "phoneFormatted": "(202) 331-3355",
+            "phone": "2023313355",
+            "address": "1201 L St. NW",
+            "city": "Washington DC",
+            "country": "United States",
+            "crossStreet": "at 19th St",
+            "postalCode": "20036",
+            "state": "D.C."
+          }
         }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -7.043959498405,
-            38.903883387232
-          ]
-        },
-        "properties": {
-          "name": "Taco truck",
-          "phoneFormatted": "(202) 331-3355",
-          "phone": "2023313355",
-          "address": "1201 L St. NW",
-          "city": "Washington DC",
-          "country": "United States",
-          "crossStreet": "at 19th St",
-          "postalCode": "20036",
-          "state": "D.C."
-        }
-      }
-    ]
-};
+      ]
+    };
 
 map.on('load', function(e) {
   // Add the data to your map as a layer
   map.addSource('places', {
-   type: 'geojson',
-   data: stores
- });
+    type: 'geojson',
+    data: stores
+  });
 
   buildLocationList(stores);
 });
@@ -328,25 +346,25 @@ function buildLocationList(data) {
     // Create a new link with the class 'title' for each store
     // and fill it with the store address
     var link = listing.appendChild(document.createElement('a'));
-   link.href = '#';
-   link.className = 'title';
-   link.dataPosition = i;
-   link.innerHTML = prop.address;
-   // Add an event listener for the links in the sidebar listing
-link.addEventListener('click', function(e) {
-  // Update the currentFeature to the store associated with the clicked link
-  var clickedListing = data.features[this.dataPosition];
-  // 1. Fly to the point associated with the clicked link
-  flyToStore(clickedListing);
-  // 2. Close all other popups and display popup for clicked store
-  createPopUp(clickedListing);
-  // 3. Highlight listing in sidebar (and remove highlight for all other listings)
-  var activeItem = document.getElementsByClassName('active');
-  if (activeItem[0]) {
-    activeItem[0].classList.remove('active');
-  }
-  this.parentNode.classList.add('active');
-});
+    link.href = '#';
+    link.className = 'title';
+    link.dataPosition = i;
+    link.innerHTML = prop.address;
+    // Add an event listener for the links in the sidebar listing
+    link.addEventListener('click', function(e) {
+      // Update the currentFeature to the store associated with the clicked link
+      var clickedListing = data.features[this.dataPosition];
+      // 1. Fly to the point associated with the clicked link
+      flyToStore(clickedListing);
+      // 2. Close all other popups and display popup for clicked store
+      createPopUp(clickedListing);
+      // 3. Highlight listing in sidebar (and remove highlight for all other listings)
+      var activeItem = document.getElementsByClassName('active');
+      if (activeItem[0]) {
+        activeItem[0].classList.remove('active');
+      }
+      this.parentNode.classList.add('active');
+    });
 
     // Create a new div with the class 'details' for each store
     // and fill it with the city and phone number
@@ -379,17 +397,17 @@ function createPopUp(currentFeature) {
       .setLngLat(currentFeature.geometry.coordinates)
       .setHTML('<div className="container">'+
 
-        '<div className="card" style="width:140px">'+
+          '<div className="card" style="width:140px">'+
           '<img className="card-img-top" src="IndulgeIndiaTruck.jpg" alt="Card image" style="width:100%">'+
-            '<div className="card-body">'+
-              '<h4 className="card-title">'+'Taco Truck'+'</h4>'+
-              '<p className="card-text">'+'</p>'+
+          '<div className="card-body">'+
+          '<h4 className="card-title">'+'Taco Truck'+'</h4>'+
+          '<p className="card-text">'+'</p>'+
           '<button onclick = window.location.assign("http://maps.google.com/maps?saddr=43.077457,-87.882252&daddr=43.090138,-87.976349") type="button" class="btn btn-success" style="margin-right: 10px">' + 'Go' +
           '</button>'+
           '<button  type="button" class="btn btn-dark" style="background-color: red">' + 'Menu' + '</button>'+
-            '</div>'+
-        '</div>'+
-      '</div>'
+          '</div>'+
+          '</div>'+
+          '</div>'
 
 
       )
@@ -413,9 +431,9 @@ stores.features.forEach(function(marker) {
   // by its center. Adjust the position accordingly
   // Create the custom markers, set their position, and add to map
   new mapboxgl.Marker(el, { offset: [0, -23] })
-    .setLngLat(marker.geometry.coordinates)
-    .addTo(map);
-    el.addEventListener('click', function(e) {
+      .setLngLat(marker.geometry.coordinates)
+      .addTo(map);
+  el.addEventListener('click', function(e) {
     var activeItem = document.getElementsByClassName('active');
     // 1. Fly to the point
     flyToStore(marker);
