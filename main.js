@@ -402,7 +402,8 @@ function createPopUp(currentFeature) {
 
 
           '<div className="card-body">'+
-          '<h7 className="card-title">'+'Taco Truck'+'</h7>'+
+          '<h7 className="card-title">'+'Taco Truck'+
+          '<h9>' + '- online'+ '</h9>'+'</h7>'+
           '<p className="card-text">'+'</p>'+
           '</div>'+
           '</div>'+
