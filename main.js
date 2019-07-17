@@ -390,21 +390,20 @@ function flyToStore(currentFeature) {
 function createPopUp(currentFeature) {
   var popUps = document.getElementsByClassName ('mapboxgl-popup');
   popUps.src = "foodmarker.png";
+  popUps.onclick = myFunction();
   // Check if there is already a popup on the map and if so, remove it
   if(popUps[0]) popUps[0].remove();
 
   var popup = new mapboxgl.Popup({closeOnClick: true})
       .setLngLat(currentFeature.geometry.coordinates)
-      .setHTML('<div className="container">'+
+      .setHTML('<div onclick = "myFunction()" className="container">'+
 
-          '<div className="card" style="width:140px">'+
-          '<img className="card-img-top" src="IndulgeIndiaTruck.jpg" alt="Card image" style="width:100%">'+
+          '<div onclick = "myFunction()" className="card" style="width:140px">'+
+
+
           '<div className="card-body">'+
-          '<h4 className="card-title">'+'Taco Truck'+'</h4>'+
+          '<h7 className="card-title">'+'Taco Truck'+'</h7>'+
           '<p className="card-text">'+'</p>'+
-          '<button onclick = window.location.assign("http://maps.google.com/maps?saddr=43.077457,-87.882252&daddr=43.090138,-87.976349") type="button" class="btn btn-success" style="margin-right: 10px">' + 'Go' +
-          '</button>'+
-          '<button  type="button" class="btn btn-dark" style="background-color: red">' + 'Menu' + '</button>'+
           '</div>'+
           '</div>'+
           '</div>'

@@ -32,6 +32,7 @@
 <div class = "encap" style="height: 0%; position: absolute; display: contents">
     <i id ="by"> Food Truck MKE</i>
     <a href="instagram://user?username=lg_luiss"><img id="insta" alt = "" src="iconfinder_2018_social_media_popular_app_logo_instagram_3225191.png" style="width: 7%"></a>
+    <div id="onmenu" style="background-color: #e83e2a">here    </div>
 
     <div id='map' class='map pad2' style="background-color: rgba(0,0,0,0.94)">
 
@@ -122,8 +123,112 @@
                 </div>
             </div>
         </div>
+        <div class="popup">
+
+            <span class="popuptext" id="myPopup">A Simple Popup!</span>
+            <div id = "circtruck"><img src="Webp.net-resizeimage.png"></div>
+
+
+        </div>
+
     </div>
+
+
 </div>
+
+
+<script>
+    // When the user clicks on div, open the popup
+    function myFunction() {
+        var popup = document.getElementById("myPopup");
+        var pop = document.getElementById("circtruck");
+        pop.classList.toggle("show");
+        popup.classList.toggle("show");
+    }
+</script>
+
+
+<style>
+    /* Popup container - can be anything you want */
+    .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* The actual popup */
+    .popup .popuptext {
+        visibility: hidden;
+        width: 95%;
+        background-color: #f1efef;
+        color: #1b1b1b;
+        text-align: center;
+        border-radius: 6px;
+        padding: 18px 0;
+        position: fixed;
+        margin-top: 450px;
+        /* right: 600px; */
+        z-index: 1;
+        /* bottom: -168%; */
+        left: 50%;
+        margin-left: -176px;
+    }
+
+    /* Popup arrow */
+    .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+
+    /* Toggle this class - hide and show the popup */
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+    }
+    #circtruck.show{
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+    }
+
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:1 ;}
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script >function burger(){
@@ -243,6 +348,13 @@ function quit(){
         z-index: 9;
         margin-left: 80px;
         padding-top: 6px;
+    }
+    #circtruck{
+        visibility: hidden;
+        z-index: 9;
+        margin-top: 448px;
+        margin-left: -34px;
+        position: absolute;
     }
 
 </style>
