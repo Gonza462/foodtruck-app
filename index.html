@@ -30,12 +30,16 @@
     <div id='listings' class='listings'></div>
 </div>
 <div class = "encap" style="height: 0%; position: absolute; display: contents">
+    <i id ="by"> Food Truck MKE</i>
+    <img id="insta" alt = "" src="iconfinder_2018_social_media_popular_app_logo_instagram_3225191.png" style="width: 7%">
+
     <div id='map' class='map pad2' style="background-color: rgba(0,0,0,0.94)">
 
-
+        
         <i id="burger" class="material-icons" onclick="burger()" style="padding: 0px 0px 0vw 0vw">menu</i>
         <i id="quit" class="material-icons" onclick="quit()">back</i>
-        <i id ="by"> by Luis Gonzalez</i>
+
+
         <div id="links">
             <div class="amazing-menu">
 
@@ -115,7 +119,9 @@
     var burger = document.getElementById('burger');
     var links = document.getElementById('links');
     var quit = document.getElementById('quit');
- //   burger.style.padding = '16px 16px 200vw 200vw';
+    var by = document.getElementById('by');
+
+    burger.style.padding = '1px 0px 0vw 0vw';
     links.style.display = 'flex';
     quit.style.display = 'inline';
 }
@@ -124,7 +130,8 @@ function quit(){
     var burger = document.getElementById('burger');
     var links = document.getElementById('links');
     var quit = document.getElementById('quit');
-   // burger.style.padding = '16px 16px 32px 32px';
+
+    burger.style.padding = '2px 0px 0px 0px';
     links.style.display = 'none';
     quit.style.display = 'none';
 }
@@ -171,15 +178,14 @@ function quit(){
     #by{
         position: relative;
         right: 0;
-        top: 0;
+        left: 70px;
+        top: 6px;
         color: white;
         background: black;
         font-size: 16px;
-        padding: 32px 32px 16px 16px;
-        border-radius: 0% 0% 69% 0%;
         transition: 0.5s;
         cursor: pointer;
-        z-index:0;
+        z-index: 9;
     }
     .element-style{}
 
@@ -190,7 +196,7 @@ function quit(){
         font-size: 32px;
         padding: 16px;
         display: none;
-        right: 61px;
+        right: 140px;
         cursor: pointer;
         z-index:9999999999;
     }
@@ -218,6 +224,14 @@ function quit(){
     .script span {
         background-color: #e83e2a;
         padding: 0 0.3em;
+    }
+    #insta{
+        position: absolute;
+        vertical-align: middle;
+        border-style: none;
+        z-index: 9;
+        margin-left: 80px;
+        padding-top: 6px;
     }
 
 </style>
