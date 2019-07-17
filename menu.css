@@ -36,7 +36,7 @@ body {
     z-index: 2;
 }
 
-.menu-item:nth-of-type(5n + 1) { background: #3E989B;   }
+.menu-item:nth-of-type(5n + 1) { background: #3E989B; z-index: 9; }
 
 .menu-item:nth-of-type(5n + 2) { background: #6DB465;  }
 
@@ -127,3 +127,9 @@ body {
         margin-left: 9px;
         margin-left: .5rem;
     }
+
+.mapboxgl-ctrl-top-right{
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
