@@ -21,16 +21,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+    <script src='https://unpkg.com/mapbox@1.0.0-beta9/dist/mapbox-sdk.min.js'></script>
 </head>
 <body>
 <div class='sidebar'>
     <div class = 'heading'>
-        <h1>Food Truck MKE</h1>
+        <h1>Food Truck MKE'</h1>
     </div>
     <div id='listings' class='listings'></div>
 </div>
 <div class = "encap" style="height: 0%; position: absolute; display: contents">
-    <i id ="by"> Food Truck MKES</i>
+    <i id ="by"> Food Truck MKE</i>
     <a href="instagram://user?username=lg_luiss"><img id="insta" alt = "" src="iconfinder_2018_social_media_popular_app_logo_instagram_3225191.png" style="width: 7%"></a>
     <div id="onmenu" style="background-color: #e83e2a">here    </div>
 
@@ -178,20 +181,20 @@
     /* The actual popup */
     .popup .popuptext {
         visibility: hidden;
-        width: 95%;
-        background-color: #f1efef;
+        width: 90;
+        background-color: #F1EFF8;
         color: #1b1b1b;
         text-align: center;
-        border-radius: 6px;
+        border-radius: 16px;
         padding-top: 13px;
         padding-bottom: 13px;
         position: fixed;
-        margin-top: 525px;
+        margin-top: 500px;
         /* right: 600px; */
         z-index: 1;
         /* bottom: -168%; */
         left: 50%;
-        margin-left: -176px;
+        margin-left: -211px;
     }
 
     /* Popup arrow */
@@ -358,7 +361,7 @@ function quit(){
     #circtruck{
         visibility: hidden;
         z-index: 9;
-        margin-top: 525px;
+        margin-top: 500px;
         margin-left: -34px;
         position: absolute;
     }

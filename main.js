@@ -25,6 +25,21 @@ var map = new mapboxgl.Map({
   // initial zoom
   zoom: 11
 });
+var geolocate = new mapboxgl.GeolocateControl();
+
+map.addControl(geolocate);
+
+geolocate.on('geolocate', function(e) {
+  var lon = e.coords.longitude;
+  var lat = e.coords.latitude
+  var position = [lon, lat];
+  console.log(position);
+});
+
+
+
+
+
 
 map.on("load", function() {
   var heatmap = new HexgridHeatmap(map, "hexgrid-heatmap", "waterway-label");
@@ -72,8 +87,8 @@ var stores =
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -87.909416,
-              43.041069
+              -87.907058,
+              43.089016
             ]
           },
           "properties": {
@@ -93,8 +108,8 @@ var stores =
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -87.903379,
-              43.052681
+              -87.9363832,
+              43.0896164
             ]
           },
           "properties": {
@@ -114,8 +129,8 @@ var stores =
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -77.043929,
-              38.910525
+              -87.9135968,
+              43.0712009
             ]
           },
           "properties": {
@@ -135,8 +150,8 @@ var stores =
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -87.866890,
-              43.072681
+              -87.9178313,
+              43.0242337
             ]
           },
           "properties": {
@@ -151,169 +166,7 @@ var stores =
             "state": "D.C."
           }
         },
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -87.946490,
-              43.036707
-            ]
-          },
-          "properties": {
-            "name": "Taco truck",
-            "phoneFormatted": "(202) 547-9338",
-            "phone": "2025479338",
-            "address": "221 Pennsylvania Ave SE",
-            "city": "Washington DC",
-            "country": "United States",
-            "crossStreet": "btwn 2nd & 3rd Sts. SE",
-            "postalCode": "20003",
-            "state": "D.C."
-          }
-        },
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -87.911955,
-              43.039634
-            ]
-          },
-          "properties": {
-            "name": "Taco truck",
-            "address": "8204 Baltimore Ave",
-            "city": "College Park",
-            "country": "United States",
-            "postalCode": "20740",
-            "state": "MD"
-          }
-        },
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -87.940095,
-              43.067230
-            ]
-          },
-          "properties": {
-            "name": "Taco truck",
-            "phoneFormatted": "(301) 654-7336",
-            "phone": "3016547336",
-            "address": "4831 Bethesda Ave",
-            "cc": "US",
-            "city": "Bethesda",
-            "country": "United States",
-            "postalCode": "20814",
-            "state": "MD"
-          }
-        },
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -77.359425054188,
-              43.061963
-            ]
-          },
-          "properties": {
-            "name": "Taco truck",
-            "phoneFormatted": "(571) 203-0082",
-            "phone": "5712030082",
-            "address": "11935 Democracy Dr",
-            "city": "Reston",
-            "country": "United States",
-            "crossStreet": "btw Explorer & Library",
-            "postalCode": "20190",
-            "state": "VA"
-          }
-        },
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -87.909896,
-              38.880100922392
-            ]
-          },
-          "properties": {
-            "name": "Taco truck",
-            "phoneFormatted": "(703) 522-2016",
-            "phone": "7035222016",
-            "address": "4075 Wilson Blvd",
-            "city": "Arlington",
-            "country": "United States",
-            "crossStreet": "at N Randolph St.",
-            "postalCode": "22203",
-            "state": "VA"
-          }
-        },
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -75.28784,
-              40.008008
-            ]
-          },
-          "properties": {
-            "name": "Taco truck",
-            "phoneFormatted": "(610) 642-9400",
-            "phone": "6106429400",
-            "address": "68 Coulter Ave",
-            "city": "Ardmore",
-            "country": "United States",
-            "postalCode": "19003",
-            "state": "PA"
-          }
-        },
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -75.20121216774,
-              39.954030175164
-            ]
-          },
-          "properties": {
-            "name": "Taco truck",
-            "phoneFormatted": "(215) 386-1365",
-            "phone": "2153861365",
-            "address": "3925 Walnut St",
-            "city": "Philadelphia",
-            "country": "United States",
-            "postalCode": "19104",
-            "state": "PA"
-          }
-        },
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -7.043959498405,
-              38.903883387232
-            ]
-          },
-          "properties": {
-            "name": "Taco truck",
-            "phoneFormatted": "(202) 331-3355",
-            "phone": "2023313355",
-            "address": "1201 L St. NW",
-            "city": "Washington DC",
-            "country": "United States",
-            "crossStreet": "at 19th St",
-            "postalCode": "20036",
-            "state": "D.C."
-          }
-        }
+
       ]
     };
 
