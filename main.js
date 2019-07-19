@@ -33,8 +33,10 @@ geolocate.on('geolocate', function(e) {
   var lon = e.coords.longitude;
   var lat = e.coords.latitude
   var position = [lon, lat];
-  console.log(position);
+
 });
+
+
 
 
 
@@ -98,6 +100,8 @@ var stores =
             "address": "1471 P St NW",
             "city": "Washington DC",
             "country": "United States",
+            "lat": "-87.907058",
+            "long": "43.089016",
             "crossStreet": "at 15th St NW",
             "postalCode": "20005",
             "state": "D.C."
@@ -117,6 +121,8 @@ var stores =
             "phoneFormatted": "(202) 507-8357",
             "phone": "2025078357",
             "address": "2221 I St NW",
+            "lat": "-87.9363832",
+            "long": "43.0896164",
             "city": "Washington DC",
             "country": "United States",
             "crossStreet": "at 22nd St NW",
@@ -139,6 +145,8 @@ var stores =
             "phone": "2023879338",
             "address": "1512 Connecticut Ave NW",
             "city": "Washington DC",
+            "lat": "-87.9135968",
+            "long": "43.0712009",
             "country": "United States",
             "crossStreet": "at Dupont Circle",
             "postalCode": "20036",
@@ -150,16 +158,18 @@ var stores =
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -87.9178313,
-              43.0242337
+              -87.9177079,
+              43.0243749
             ]
           },
           "properties": {
-            "name": "Taco truck",
+            "name": "Zocalo Food Park",
             "phoneFormatted": "(202) 337-9338",
             "phone": "2023379338",
             "address": "3333 M St NW",
             "city": "Washington DC",
+            "lat": "-87.9177079",
+            "long": "43.0243749",
             "country": "United States",
             "crossStreet": "at 34th St NW",
             "postalCode": "20007",
@@ -231,52 +241,67 @@ function buildLocationList(data) {
 
 
 
+
 //Function to fly to the correct store
 function flyToStore(currentFeature) {
+
+
+
+
   map.flyTo({
     center: currentFeature.geometry.coordinates,
     zoom: 15
   });
 }
+//get user coordinates
+navigator.geolocation.getCurrentPosition(function (position) {
+  var ln = position.coords.longitude;
+  var lt = position.coords.latitude;
+
 
 //Function to display popup features
-function createPopUp(currentFeature) {
-  var popUps = document.getElementsByClassName ('mapboxgl-popup');
-  popUps.src = "foodmarker.png";
-  popUps.onclick = myFunction();
-  // Check if there is already a popup on the map and if so, remove it
-  if(popUps[0]) popUps[0].remove();
+  function createPopUp(currentFeature) {
 
-  var popup = new mapboxgl.Popup({closeOnClick: true})
-      .setLngLat(currentFeature.geometry.coordinates)
-      .setHTML('<div onclick = "myFunction()" className="container">'+
-
-          '<div onclick = "myFunction()" className="card" style="width:140px">'+
+    var popUps = document.getElementsByClassName('mapboxgl-popup');
+    popUps.src = "foodmarker.png";
+    popUps.onclick = myFunction();
+    var ts = currentFeature.geometry.coordinates;
 
 
-          '<div className="card-body">'+
-          '<h7 className="card-title">'+'Taco Truck'+
-          '<h9>' + '- online'+ '</h9>'+'</h7>'+
-          '<p className="card-text">'+'</p>'+
-          '</div>'+
-          '</div>'+
-          '</div>'
+    // Check if there is already a popup on the map and if so, remove it
+    if (popUps[0]) popUps[0].remove();
 
 
-      )
+    var popup = new mapboxgl.Popup({closeOnClick: true})
+
+        .setLngLat(currentFeature.geometry.coordinates)
+        .setHTML('<div onclick = "myFunction()" className="container">' +
+
+            '<div className="card" style="width:140px">' +
 
 
+            '<div className="card-body">' +
+            '<h7 className="card-title">' + 'Taco Truck' +
+            '<h9>' + '- online' + '</h9>' + '</h7>' +
+            '<p className="card-text">' + '</p>' +
+            '</div>' +
+            '</div>' +
+            '</div>' + '<div className="popup">' + '<span className="popuptext" id="myPopup">' +
+            '<a id = "mapholder" href= http://maps.google.com/maps?saddr=' + lt +","+ln + '&daddr=' + currentFeature.properties.long + ',' + currentFeature.properties.lat + '>' +
+            '<button style = "background-color: #4CAF50;  border: none; color: white; padding: 5px 18px; border-radius: 16px; text-align: center;display: inline-block;" className="button">' + 'Go' + '</button>' + '</a>' + '</span>' +
+            '<div id="circtruck">' + '<img src="Webp.net-resizeimage.png">' + '</div>' +
 
 
-      .addTo(map);
+            '</div>'
+        ).addTo(map);
 
 
-}
+  }
 
 //// Add an event listener for when a user clicks on the map
 
 stores.features.forEach(function(marker) {
-  // Create a div element for the marker
+  // Create a div element for the markerc
   var el = document.createElement('div');
   // Add a class called 'marker' to each div
   el.className = 'marker';
@@ -302,4 +327,5 @@ stores.features.forEach(function(marker) {
     console.log(listing);
     listing.classList.add('active');
   });
+});
 });

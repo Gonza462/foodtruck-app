@@ -44,6 +44,7 @@
         <i id="quit" class="material-icons" onclick="quit()">back</i>
 
 
+
         <div id="links">
             <div class="amazing-menu">
 
@@ -126,14 +127,14 @@
                 </div>
             </div>
         </div>
-        <div class="popup">
+      <!--  <div class="popup">
 
             <span class="popuptext" id="myPopup"><a href="http://maps.google.com/maps?saddr=43.077457,-87.882252&daddr=43.090138,-87.976349"><button class="button">Go</button></a></span>
             <div id = "circtruck"><img src="Webp.net-resizeimage.png"></div>
 
 
         </div>
-
+        -->
     </div>
 
 
@@ -145,8 +146,8 @@
     function myFunction() {
         var popup = document.getElementById("myPopup");
         var pop = document.getElementById("circtruck");
-        pop.classList.toggle("show");
-        popup.classList.toggle("show");
+        //pop.classList.toggle("show");
+       // popup.classList.toggle("show");
     }
 </script>
 
@@ -180,8 +181,8 @@
 
     /* The actual popup */
     .popup .popuptext {
-        visibility: hidden;
-        width: 90;
+        visibility: visible;
+        width: 90px;
         background-color: #F1EFF8;
         color: #1b1b1b;
         text-align: center;
