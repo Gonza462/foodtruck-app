@@ -8,8 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
-    <link rel = "stylesheet" type = "text/css" href = "styles.css" />
-    <link rel = "stylesheet" type = "text/css" href = "menu.css" />
+    <link rel = "stylesheet" type = "text/css" href = "css/styles.css" />
+    <link rel = "stylesheet" type = "text/css" href = "css/menu.css" />
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.js'></script>
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.css' type='text/css' />
@@ -27,38 +27,40 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
     <script src='https://unpkg.com/mapbox@1.0.0-beta9/dist/mapbox-sdk.min.js'></script>
-    <script src="backend.js"></script>
+    <script src="js/backend.js"></script>
+    <script src="js/jsonstores.js"></script>
 </head>
 <body>
 <div class='sidebar'>
     <div class = 'heading'>
         <h1>Food Truck MKE'</h1>
     </div>
-    <div id='listings' class='listings'></div>
+    <div id='listings' class='listings'>
+
+    </div>
 </div>
 <div class = "encap" style="height: 0%; position: absolute; display: contents">
     <i id ="by"> Food Truck MKE</i>
-    <a href="instagram://user?username=lg_luiss"><img id="insta" alt = "" src="iconfinder_2018_social_media_popular_app_logo_instagram_3225191.png" style="width: 7%"></a>
-    <div id="onmenu" style="background-color: #e83e2a">here    </div>
-
+    <a href="instagram://user?username=lg_luiss"><img id="insta" alt = "" src="images/iconfinder_2018_social_media_popular_app_logo_instagram_3225191.png" style="width: 7%"></a>
+    <div id="onmenu" style="background-color: #e83e2a"></div>
     <div id='map' class='map pad2' style="background-color: rgba(0,0,0,0.94)">
-
-        
         <i id="burger" class="material-icons" onclick="burger()" style="padding: 0px 0px 0vw 0vw">menu</i>
         <i id="quit" class="material-icons" onclick="quit()">back</i>
-
-
-
         <div id="links">
             <div class="amazing-menu">
-
                 <div class="menu-item">
                     <div class="container">
                         <div class="icon"><span class="ion-icecream"></span></div>
                         <div class="title">jamaican truck </div>
                         <div class="arrow"><span class="ion-chevron-right"></span></div>
                         <div class="rating -r2">
-                            <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                            <div class="stars">
+                                <span class="ion-star"></span>
+                                <span class="ion-star"></span>
+                                <span class="ion-star"></span>
+                                <span class="ion-star"></span>
+                                <span class="ion-star"></span>
+                            </div>
                             <div class="text">56 Votes</div>
                         </div>
                     </div>
@@ -69,7 +71,11 @@
                         <div class="title">taco truck</div>
                         <div class="arrow"><span class="ion-chevron-right"></span></div>
                         <div class="rating -r5">
-                            <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                            <div class="stars">
+                                <span class="ion-star"></span>
+                                <span class="ion-star"></span><span class="ion-star"></span>
+                                <span class="ion-star"></span><span class="ion-star"></span>
+                            </div>
                             <div class="text">786 Votes</div>
                         </div>
                     </div>
@@ -80,7 +86,12 @@
                         <div class="title">bbq truck</div>
                         <div class="arrow"><span class="ion-chevron-right"></span></div>
                         <div class="rating -r4">
-                            <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                            <div class="stars">
+                                <span class="ion-star"></span>
+                                <span class="ion-star"></span>
+                                <span class="ion-star"></span>
+                                <span class="ion-star"></span>
+                                <span class="ion-star"></span></div>
                             <div class="text">71 Votes</div>
                         </div>
                     </div>
@@ -91,7 +102,10 @@
                         <div class="title">Wings Truck</div>
                         <div class="arrow"><span class="ion-chevron-right"></span></div>
                         <div class="rating -r4">
-                            <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                            <div class="stars"><span class="ion-star"></span>
+                                <span class="ion-star"></span><span class="ion-star"></span>
+                                <span class="ion-star"></span><span class="ion-star"></span>
+                            </div>
                             <div class="text">71 Votes</div>
                         </div>
                     </div>
@@ -102,7 +116,11 @@
                         <div class="title">bagel truck</div>
                         <div class="arrow"><span class="ion-chevron-right"></span></div>
                         <div class="rating -r4">
-                            <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
+                            <div class="stars"><span class="ion-star"></span>
+                                <span class="ion-star"></span>
+                                <span class="ion-star"></span>
+                                <span class="ion-star"></span>
+                                <span class="ion-star"></span></div>
                             <div class="text">26 Votes</div>
                         </div>
                     </div>
@@ -131,242 +149,18 @@
                 </div>
             </div>
         </div>
-      <!--  <div class="popup">
-
-            <span class="popuptext" id="myPopup"><a href="http://maps.google.com/maps?saddr=43.077457,-87.882252&daddr=43.090138,-87.976349"><button class="button">Go</button></a></span>
-            <div id = "circtruck"><img src="Webp.net-resizeimage.png"></div>
-
-
-        </div>
-        -->
     </div>
-
-
 </div>
-
-
-<script>
-    // When the user clicks on div, open the popup
-    function myFunction() {
-        var popup = document.getElementById("myPopup");
-        var pop = document.getElementById("circtruck");
-        //pop.classList.toggle("show");
-       // popup.classList.toggle("show");
-    }
-</script>
-
-
-<style>
-    /* Popup container - can be anything you want */
-    .button {
-        background-color: #4CAF50;
-        border: none;
-        color: white;
-        padding: 5px 18px;
-        margin-left: 270px;
-        border-radius: 16px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        /* margin: 4px 2px; */
-        cursor: pointer;
-    }
-
-    .popup {
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    /* The actual popup */
-    .popup .popuptext {
-        visibility: visible;
-        width: 90px;
-        background-color: #F1EFF8;
-        color: #1b1b1b;
-        text-align: center;
-        border-radius: 16px;
-        padding-top: 13px;
-        padding-bottom: 13px;
-        position: fixed;
-        margin-top: 500px;
-        /* right: 600px; */
-        z-index: 1;
-        /* bottom: -168%; */
-        left: 50%;
-        margin-left: -211px;
-    }
-
-    /* Popup arrow */
-    .popup .popuptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-    }
-
-    /* Toggle this class - hide and show the popup */
-    .popup .show {
-        visibility: visible;
-        -webkit-animation: fadeIn 1s;
-        animation: fadeIn 1s;
-    }
-    #circtruck.show{
-        visibility: visible;
-        -webkit-animation: fadeIn 1s;
-        animation: fadeIn 1s;
-    }
-
-    /* Add animation (fade in the popup) */
-    @-webkit-keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
-    }
-
-    @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity:1 ;}
-    }
-</style>
-
-
-
-
-
-
-
-<script >function burger(){
-    var burger = document.getElementById('burger');
-    var links = document.getElementById('links');
-    var quit = document.getElementById('quit');
-    var by = document.getElementById('by');
-
-   // burger.style.padding = '1px 0px 0vw 0vw';
-    links.style.display = 'flex';
-    quit.style.display = 'inline';
-}
-
-function quit(){
-    var burger = document.getElementById('burger');
-    var links = document.getElementById('links');
-    var quit = document.getElementById('quit');
-
-
-    //burger.style.padding = '2px 0px 0px 0px';
-    links.style.display = 'none';
-    quit.style.display = 'none';
-}
-</script>
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-46156385-1', 'cssscript.com');
-    ga('send', 'pageview');
-
-</script>
-
-
-<script src = "main.js" charset="utf-8"></script>
+<script src = "js/main.js" charset="utf-8"></script>
 </body>
-
-
-<style>
-
-
-
-    body{padding: 0; margin: 0; font-family: 'Helvetica Neue', 'Arial','Helvetica', 'sans-serif';}
-    h1 { position: absolute; top: 100px; left: 100px; }
-    #burger{
-        position: relative;
-        right: 0;
-        top: 0;
-        color: white;
-        background: linear-gradient(45deg, #1c1c1c 10%, rgba(93, 93, 93, 0.37));;
-        font-size: 32px;
-        padding: 32px 32px 16px 16px;
-        border-radius: 0% 0% 69% 0%;
-        transition: 0.5s;
-        cursor: pointer;
-        z-index:0;
-    }
-    #by{
-        position: relative;
-        right: 0;
-        left: 70px;
-        top: 6px;
-        color: white;
-        background: black;
-        font-size: 16px;
-        transition: 0.5s;
-        cursor: pointer;
-        z-index: 9;
-    }
-    .element-style{}
-
-    #quit{
-        position: relative;
-        top: 0;
-        color: white;
-        font-size: 32px;
-        padding: 16px;
-        display: none;
-        right: 140px;
-        cursor: pointer;
-        z-index:9999999999;
-    }
-
-    #links{
-        display: none;
-        flex-direction: column;
-        width: 100vw;
-       /* height: 100;*/
-        /* padding: 42vh 0; */
-        justify-content: space-around;
-        z-index: 9998;
-        overflow: scroll;
-    }
-
-    #links a{
-        text-align: center;
-        text-decoration: none;
-        color: white;
-        font-size: 2em;
-        font-family: 'Roboto';
-        z-index: 10;
-
-    }
-    .script span {
-        background-color: #e83e2a;
-        padding: 0 0.3em;
-    }
-    #insta{
-        position: absolute;
-        vertical-align: middle;
-        border-style: none;
-        z-index: 9;
-        margin-left: 80px;
-        padding-top: 6px;
-    }
-    #circtruck{
-        visibility: hidden;
-        z-index: 9;
-        margin-top: 500px;
-        margin-left: -34px;
-        position: absolute;
-    }
-
-</style>
-
 </html>
+
+
+<!--  <div class="popup">
+
+      <span class="popuptext" id="myPopup"><a href="http://maps.google.com/maps?saddr=43.077457,-87.882252&daddr=43.090138,-87.976349"><button class="button">Go</button></a></span>
+      <div id = "circtruck"><img src="Webp.net-resizeimage.png"></div>
+
+
+  </div>
+  -->

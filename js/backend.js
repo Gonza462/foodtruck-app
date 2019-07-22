@@ -16,11 +16,9 @@ function updatePosition(position) {
     }
 }
 
-setInterval(function(){updatePosition(getLocation());}, 10000);
+setInterval(function(){updatePosition(getLocation());}, 100);
 
 function currentLocation() {
-    console.log(window.lng);
-    console.log(window.lat);
     return {lat:window.lat, lng:window.lng};
 };
 
@@ -38,8 +36,9 @@ var redraw = function(payload) {
     lat = payload.message.lat;
     lng = payload.message.lng;
 
-    map.setCenter({lat:lat, lng:lng, alt:0});
-    mark.setPosition({lat:lat, lng:lng, alt:0});
+    //console.log(lat,lng);
+   // map.setCenter({lat:lat, lng:lng, alt:0});
+   // mark.setPosition({lat:lat, lng:lng});
 };
 
 var pnChannel = "map2-channel";
@@ -51,6 +50,8 @@ var pubnub = new PubNub({
 
 pubnub.subscribe({channels: [pnChannel]});
 pubnub.addListener({message:redraw});
+console.log(window.lng);
+console.log(window.lat);
 
 setInterval(function() {
     pubnub.publish({channel:pnChannel, message:currentLocation()});
