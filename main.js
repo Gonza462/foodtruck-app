@@ -286,7 +286,7 @@ function createPopUp(currentFeature) {
             '<p className="card-text">' + '</p>' +
             '</div>' +
             '</div>' +
-            '</div>' + '<div className="popup">' + '<span className="popuptext" id="myPopup">' +
+            '</div>' + '<div clas-sName="popup">' + '<span className="popuptext" id="myPopup">' +
             '<a id = "mapholder" href= http://maps.google.com/maps?saddr=' + lt+ ","+ ln + '&daddr=' + currentFeature.properties.long + ',' + currentFeature.properties.lat + '>' +
             '<button style = "background-color: #4CAF50;  border: none; color: white; padding: 5px 18px; border-radius: 16px; text-align: center;display: inline-block;" className="button">' + 'Go' + '</button>' + '</a>' + '</span>' +
             '<div id="circtruck">' + '<img src="Webp.net-resizeimage.png">' + '</div>' +
