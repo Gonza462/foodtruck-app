@@ -1,11 +1,4 @@
 
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  var pop = document.getElementById("circtruck");
-  //pop.classList.toggle("show");
-  // popup.classList.toggle("show");
-}   // When the user clicks on div, open the popup
-
 
 
 // This will let you use the .remove() function later on
@@ -47,6 +40,11 @@ var map = new mapboxgl.Map({
  */
 
 
+
+
+
+
+
 map.on("load", function() {
   var heatmap = new HexgridHeatmap(map, "hexgrid-heatmap", "waterway-label");
 
@@ -80,6 +78,109 @@ map.scrollZoom.disable();
 
 
 
+
+
+
+
+var stores =
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.907058,
+          43.089016
+        ]
+      },
+      "properties": {
+        "name":"Taqueria Aranda's",
+        "phoneFormatted": "(202) 234-7336",
+        "phone": "2022347336",
+        "address": "1471 P St NW",
+        "city": "Washington DC",
+        "country": "United States",
+        "lat": "-87.907058",
+        "long": "43.089016",
+        "crossStreet": "at 15th St NW",
+        "postalCode": "20005",
+        "state": "D.C."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9363832,
+          43.0896164
+        ]
+      },
+      "properties": {
+        "name": "Taco truck",
+        "phoneFormatted": "(202) 507-8357",
+        "phone": "2025078357",
+        "address": "2221 I St NW",
+        "lat": "-87.9363832",
+        "long": "43.0896164",
+        "city": "Washington DC",
+        "country": "United States",
+        "crossStreet": "at 22nd St NW",
+        "postalCode": "20037",
+        "state": "D.C."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9135968,
+          43.0712009
+        ]
+      },
+      "properties": {
+        "name": "Taco truck",
+        "phoneFormatted": "(202) 387-9338",
+        "phone": "2023879338",
+        "address": "1512 Connecticut Ave NW",
+        "city": "Washington DC",
+        "lat": "-87.9135968",
+        "long": "43.0712009",
+        "country": "United States",
+        "crossStreet": "at Dupont Circle",
+        "postalCode": "20036",
+        "state": "D.C."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9177079,
+          43.0243749
+        ]
+      },
+      "properties": {
+        "name": "Zocalo Food Park",
+        "phoneFormatted": "(202) 337-9338",
+        "phone": "2023379338",
+        "address": "3333 M St NW",
+        "city": "Washington DC",
+        "lat": "-87.9177079",
+        "long": "43.0243749",
+        "country": "United States",
+        "crossStreet": "at 34th St NW",
+        "postalCode": "20007",
+        "state": "D.C."
+      }
+    },
+
+  ]
+};
 
 map.on('load', function(e) {
   // Add the data to your map as a layer
@@ -140,6 +241,9 @@ function buildLocationList(data) {
   }
 }
 
+
+
+
 //Function to fly to the correct store
 function flyToStore(currentFeature) {
 
@@ -156,6 +260,8 @@ function createPopUp(currentFeature) {
     var lt = position.coords.latitude;
 
 //Function to display popup features
+
+
     var popUps = document.getElementsByClassName('mapboxgl-popup');
     popUps.src = "foodmarker.png";
     popUps.onclick = myFunction();
@@ -180,16 +286,21 @@ function createPopUp(currentFeature) {
             '<p className="card-text">' + '</p>' +
             '</div>' +
             '</div>' +
-            '</div>' + '<div className="popup">' + '<span className="popuptext" id="myPopup">' +
+            '</div>' + '<div clas-sName="popup">' + '<span className="popuptext" id="myPopup">' +
             '<a id = "mapholder" href= http://maps.google.com/maps?saddr=' + lt+ ","+ ln + '&daddr=' + currentFeature.properties.long + ',' + currentFeature.properties.lat + '>' +
             '<button style = "background-color: #4CAF50;  border: none; color: white; padding: 5px 18px; border-radius: 16px; text-align: center;display: inline-block;" className="button">' + 'Go' + '</button>' + '</a>' + '</span>' +
-            '<div id="circtruck">' + '<img src="../images/Webp.net-resizeimage.png">' + '</div>' +
+            '<div id="circtruck">' + '<img src="Webp.net-resizeimage.png">' + '</div>' +
+
+
             '</div>'
         ).addTo(map);
   });
+
 }
 
-/*
+//// Add an event listener for when a user clicks on the map
+
+stores.features.forEach(function (marker) {
   // Create a div element for the markerc
   var el = document.createElement('div');
   // Add a class called 'marker' to each div
@@ -197,94 +308,24 @@ function createPopUp(currentFeature) {
   // By default the image for your custom marker will be anchored
   // by its center. Adjust the position accordingly
   // Create the custom markers, set their position, and add to map
-  var tlong = currentLocation().lng;
-  var tlat = currentLocation().lat;
   new mapboxgl.Marker(el, {offset: [0, -23]})
-      .setLngLat([tlong, tlat])
+      .setLngLat(marker.geometry.coordinates)
       .addTo(map);
+  el.addEventListener('click', function (e) {
+    var activeItem = document.getElementsByClassName('active');
+    // 1. Fly to the point
+    flyToStore(marker);
+    // 2. Close all other popups and display popup for clicked store
+    createPopUp(marker);
+    // 3. Highlight listing in sidebar (and remove highlight for all other listings)
+    e.stopPropagation();
+    if (activeItem[0]) {
+      activeItem[0].classList.remove('active');
+    }
 
-*/
-
-//// Add an event listener for when a user clicks on the map
-  stores.features.forEach(function (marker) {
-
-    var ob = [];
-    ob.push(window.lng, window.lat);
-    //console.log(ob);
-    // Create a div element for the markerc
-    var el = document.createElement('div');
-    // Add a class called 'marker' to each div
-    el.className = 'marker';
-    // By default the image for your custom marker will be anchored
-    // by its center. Adjust the position accordingly
-    // Create the custom markers, set their position, and add to map
-    console.log("setting" + marker.geometry.coordinates);
-    // console.log(ob);
-    new mapboxgl.Marker(el, {offset: [0, -23]})
-        .setLngLat(marker.geometry.coordinates)
-        .addTo(map);
-    el.addEventListener('click', function (e) {
-      var activeItem = document.getElementsByClassName('active');
-      // 1. Fly to the point
-      flyToStore(marker);
-      // 2. Close all other popups and display popup for clicked store
-      createPopUp(marker);
-      // 3. Highlight listing in sidebar (and remove highlight for all other listings)
-      e.stopPropagation();
-      if (activeItem[0]) {
-        activeItem[0].classList.remove('active');
-      }
-
-      var listing = document.getElementById('listing-' + i);
-      console.log(listing);
-      listing.classList.add('active');
-    });
+    var listing = document.getElementById('listing-' + i);
+    console.log(listing);
+    listing.classList.add('active');
   });
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function burger(){
-  var burger = document.getElementById('burger');
-  var links = document.getElementById('links');
-  var quit = document.getElementById('quit');
-  var by = document.getElementById('by');
-
-  // burger.style.padding = '1px 0px 0vw 0vw';
-  links.style.display = 'flex';
-  quit.style.display = 'inline';
-}
-
-function quit(){
-  var burger = document.getElementById('burger');
-  var links = document.getElementById('links');
-  var quit = document.getElementById('quit');
-
-
-  //burger.style.padding = '2px 0px 0px 0px';
-  links.style.display = 'none';
-  quit.style.display = 'none';
-}
-
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-46156385-1', 'cssscript.com');
-ga('send', 'pageview');
