@@ -25,21 +25,6 @@ var map = new mapboxgl.Map({
   // initial zoom
   zoom: 11
 });
-var geolocate = new mapboxgl.GeolocateControl();
-
-map.addControl(geolocate);
-
-geolocate.on('geolocate', function(e) {
-  var lon = e.coords.longitude;
-  var lat = e.coords.latitude
-  var position = [lon, lat];
-
-});
-
-
-
-
-
 
 
 
@@ -66,13 +51,13 @@ map.scrollZoom.disable();
 
 //Add geolocate control to the map.
 
-/*map.addControl(new mapboxgl.GeolocateControl({
+map.addControl(new mapboxgl.GeolocateControl({
   positionOptions: {
     enableHighAccuracy: true
   },
   trackUserLocation: true
 }),'top-right');
-*/
+
 
 
 
@@ -254,6 +239,7 @@ function flyToStore(currentFeature) {
   });
 }
 //get user coordinates
+
 navigator.geolocation.getCurrentPosition(function (position) {
   var ln = position.coords.longitude;
   var lt = position.coords.latitude;
@@ -287,7 +273,7 @@ navigator.geolocation.getCurrentPosition(function (position) {
             '</div>' +
             '</div>' +
             '</div>' + '<div className="popup">' + '<span className="popuptext" id="myPopup">' +
-            '<a id = "mapholder" href= http://maps.google.com/maps?saddr=' + lt +","+ln + '&daddr=' + currentFeature.properties.long + ',' + currentFeature.properties.lat + '>' +
+            '<a id = "mapholder" href= http://maps.google.com/maps?saddr=' + lt+ ',' + ln + '&daddr=' + currentFeature.properties.long + ',' + currentFeature.properties.lat + '>' +
             '<button style = "background-color: #4CAF50;  border: none; color: white; padding: 5px 18px; border-radius: 16px; text-align: center;display: inline-block;" className="button">' + 'Go' + '</button>' + '</a>' + '</span>' +
             '<div id="circtruck">' + '<img src="Webp.net-resizeimage.png">' + '</div>' +
 
