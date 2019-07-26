@@ -176,7 +176,7 @@ function createPopUp(currentFeature) {
 
             '<div className="card-body">' +
             '<h7 className="card-title">' + currentFeature.properties.name +
-            '<h9>' + '- online' + '</h9>' + '</h7>' +
+            '<h9>' + ' online' + '</h9>' + '</h7>' +
             '<p className="card-text">' + '</p>' +
             '</div>' +
             '</div>' +

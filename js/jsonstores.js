@@ -7,12 +7,12 @@ var stores =
                 "geometry": {
                     "type": "Point",
                     "coordinates": [
-                        0,
-                        0
+                        -87.9059910,
+                        43.0892477
                     ]
                 },
                 "properties": {
-                    "name":"Taqueria Aranda's",
+                    "name":"Taqueria Buena Vista",
                     "phoneFormatted": "(202) 234-7336",
                     "phone": "2022347336",
                     "address": "1471 P St NW",
@@ -94,6 +94,122 @@ var stores =
                     "state": "D.C."
                 }
             },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -87.9197065,
+                        43.0064272
+                    ]
+                },
+                "properties": {
+                    "name": "El Tapatio",
+                    "phoneFormatted": "(202) 337-9338",
+                    "phone": "2023379338",
+                    "address": "3333 M St NW",
+                    "city": "Washington DC",
+                    "lat": "-87.9197065",
+                    "long": "43.0064272",
+                    "country": "United States",
+                    "crossStreet": "at 34th St NW",
+                    "postalCode": "20007",
+                    "state": "D.C."
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -87.9091101,
+                        43.0383623
+                    ]
+                },
+                "properties": {
+                    "name": "Falafel Guys",
+                    "phoneFormatted": "(202) 337-9338",
+                    "phone": "2023379338",
+                    "address": "3333 M St NW",
+                    "city": "Washington DC",
+                    "lat": "-87.9091101",
+                    "long": "43.0383623",
+                    "country": "United States",
+                    "crossStreet": "at 34th St NW",
+                    "postalCode": "20007",
+                    "state": "D.C."
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -87.9090471,
+                        43.0375919
+                    ]
+                },
+                "properties": {
+                    "name": "The Fatty Patty",
+                    "phoneFormatted": "(202) 337-9338",
+                    "phone": "2023379338",
+                    "address": "3333 M St NW",
+                    "city": "Washington DC",
+                    "lat": "-87.9090471",
+                    "long": "43.0375919",
+                    "country": "United States",
+                    "crossStreet": "at 34th St NW",
+                    "postalCode": "20007",
+                    "state": "D.C."
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -87.9021355,
+                        43.0389995
+                    ]
+                },
+                "properties": {
+                    "name": "La Guacamaya",
+                    "phoneFormatted": "(202) 337-9338",
+                    "phone": "2023379338",
+                    "address": "3333 M St NW",
+                    "city": "Washington DC",
+                    "lat": "-87.9021355",
+                    "long": "43.0389995",
+                    "country": "United States",
+                    "crossStreet": "at 34th St NW",
+                    "postalCode": "20007",
+                    "state": "D.C."
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -87.9119499,
+                        43.0064735
+                    ]
+                },
+                "properties": {
+                    "name": "La Guacamaya",
+                    "phoneFormatted": "(202) 337-9338",
+                    "phone": "2023379338",
+                    "address": "3333 M St NW",
+                    "city": "Washington DC",
+                    "lat": "-87.9119499",
+                    "long": "43.0064735",
+                    "country": "United States",
+                    "crossStreet": "at 34th St NW",
+                    "postalCode": "20007",
+                    "state": "D.C."
+                }
+            },
+
 
         ]
     };
