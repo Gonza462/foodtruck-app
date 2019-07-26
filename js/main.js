@@ -19,14 +19,14 @@ if (!('remove' in Element.prototype)) {
 
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZ29uemE0NjIiLCJhIjoiY2ppZmRieXk2MGxodDNxb2N2ZzVzbWFvZCJ9.1htrThMOpVkVcrWlHg2Bbg';
-
-
+var maplook =  'mapbox://styles/mapbox/light-v9';
+var nighton = false;
 // This adds the map to the page
 var map = new mapboxgl.Map({
   // container id specified in the HTML
   container: 'map',
   // style URL
-  style: 'mapbox://styles/gonza462/cjy5xxr440uvz1cn2wt9u4n8m',
+  style: maplook,
   // initial position in [lon, lat] format
   center: [-87.919848, 43.036623],
   // initial zoom

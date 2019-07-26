@@ -27,8 +27,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
     <script src='https://unpkg.com/mapbox@1.0.0-beta9/dist/mapbox-sdk.min.js'></script>
+
     <script src="js/backend.js"></script>
     <script src="js/jsonstores.js"></script>
+    <script src="js/functions.js"></script>
 </head>
 <body>
 <div class='sidebar'>
@@ -41,7 +43,9 @@
 </div>
 <div class = "encap" style="height: 0%; position: absolute; display: contents">
     <i id ="by"> Food Truck MKE</i>
-    <a href="instagram://user?username=lg_luiss"><img id="insta" alt = "" src="images/iconfinder_2018_social_media_popular_app_logo_instagram_3225191.png" style="width: 7%"></a>
+    <a onclick="nightMode()"><img id = "nightmode" src="images/nightmode.png"></a>
+    <a href="instagram://user?username=lg_luiss"><img id="insta" alt = "" src="images/iconfinder_2018_social_media_popular_app_logo_instagram_3225191.png" style="width: 6%"></a>
+
     <div id="onmenu" style="background-color: #e83e2a"></div>
     <div id='map' class='map pad2' style="background-color: rgba(0,0,0,0.94)">
         <i id="burger" class="material-icons" onclick="burger()" style="padding: 0px 0px 0vw 0vw">menu</i>
