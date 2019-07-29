@@ -54,7 +54,7 @@ a.mapboxgl-ctrl-logo{
   left: 0%;
   width: 100%;
   height: 100%;
-  top: 0;
+  top: -40px;
   bottom: 0;
 }
 
@@ -183,9 +183,9 @@ a.mapboxgl-ctrl-logo{
 .marker {
   border: none;
   cursor: pointer;
-  height: 48px;
-  width: 48px;
-  background-image: url(../images/truckmarker.png);
+  height: 42px;
+  width: 42px;
+
   background-color: rgba(0, 0, 0, 0);
   z-index: 1;
 
@@ -359,15 +359,15 @@ h1 { position: absolute; top: 100px; left: 100px; }
 #burger{
   position: relative;
   right: 0;
-  top: 0;
-  color: white;
-  background: linear-gradient(45deg, #1c1c1c 10%, rgba(93, 93, 93, 0.37));;
+  top: 39px;
+  color: black;
+  background: linear-gradient(45deg, #1c1c1c00 10%, rgba(93, 93, 93, 0));
   font-size: 32px;
   padding: 32px 32px 16px 16px;
   border-radius: 0% 0% 69% 0%;
   transition: 0.5s;
   cursor: pointer;
-  z-index:0;
+  z-index: 13;
 }
 #by{
   position: relative;
@@ -385,14 +385,14 @@ h1 { position: absolute; top: 100px; left: 100px; }
 
 #quit{
   position: relative;
-  top: 0;
+  top: 11px;
   color: white;
   font-size: 32px;
   padding: 16px;
   display: none;
-  right: 140px;
+  right: 150px;
   cursor: pointer;
-  z-index:9999999999;
+  z-index: 9999999999;
 }
 
 #links{

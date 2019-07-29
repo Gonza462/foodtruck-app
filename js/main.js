@@ -157,8 +157,9 @@ function createPopUp(currentFeature) {
 
 //Function to display popup features
     var popUps = document.getElementsByClassName('mapboxgl-popup');
-    popUps.src = "foodmarker.png";
+
     popUps.onclick = myFunction();
+
     var ts = currentFeature.geometry.coordinates;
 
 
@@ -167,7 +168,6 @@ function createPopUp(currentFeature) {
 
 
     var popup = new mapboxgl.Popup({closeOnClick: true})
-
         .setLngLat(currentFeature.geometry.coordinates)
         .setHTML('<div onclick = "myFunction()" className="container">' +
 
@@ -183,10 +183,13 @@ function createPopUp(currentFeature) {
             '</div>' + '<div className="popup">' + '<span className="popuptext" id="myPopup">' +
             '<a id = "mapholder" href= http://maps.google.com/maps?saddr=' + lt+ ","+ ln + '&daddr=' + currentFeature.properties.long + ',' + currentFeature.properties.lat + '>' +
             '<button style = "background-color: #4CAF50;  border: none; color: white; padding: 5px 18px; border-radius: 16px; text-align: center;display: inline-block;" className="button">' + 'Go' + '</button>' + '</a>' + '</span>' +
-            '<div id="circtruck">' + '<img src="../images/Webp.net-resizeimage.png">' + '</div>' +
+            '<div id="circtruck">' + '<img src="images/Webp.net-resizeimage.png">' + '</div>' +
             '</div>'
         ).addTo(map);
   });
+
+
+
 }
 
 /*
@@ -215,10 +218,24 @@ stores.features.forEach(function (marker) {
   var el = document.createElement('div');
   // Add a class called 'marker' to each div
   el.className = 'marker';
+
+
   // By default the image for your custom marker will be anchored
   // by its center. Adjust the position accordingly
   // Create the custom markers, set their position, and add to map
-  console.log("setting" + marker.geometry.coordinates);
+  console.log(marker.geometry.type);
+  if(marker.geometry.type=="Taco"){
+    el.style.backgroundImage =  "url('images/taco-truck_42x42.png')";
+  }else if(marker.geometry.type=="Burger"){
+    el.style.backgroundImage = "url('images/burgertruck_42x42.png')";
+  }else if(marker.geometry.type=="Eastern"){
+    el.style.backgroundImage = "url('images/falafel_42x42.png')";
+  }else if(marker.geometry.type=="Zocalo"){
+    el.style.backgroundImage = "url('images/delivery_42x42.png')";
+  } else{
+    el.style.backgroundImage = "url('images/food-trucks_42x42.png')";
+  }
+
   // console.log(ob);
   new mapboxgl.Marker(el, {offset: [0, -23]})
       .setLngLat(marker.geometry.coordinates)
@@ -240,11 +257,6 @@ stores.features.forEach(function (marker) {
     listing.classList.add('active');
   });
 });
-
-
-
-
-
 
 
 

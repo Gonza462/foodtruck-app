@@ -3,7 +3,7 @@
  */
 
 function nightMode(){
-    //maplook = 'mapbox://styles/mapbox/lightv9';
+
     nighton = !nighton;
     if(nighton) {
         map.setStyle('mapbox://styles/mapbox/dark-v9');

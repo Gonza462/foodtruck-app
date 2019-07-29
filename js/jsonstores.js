@@ -5,7 +5,7 @@ var stores =
             {
                 "type": "Feature",
                 "geometry": {
-                    "type": "Point",
+                    "type": "Taco",
                     "coordinates": [
                         -87.9059910,
                         43.0892477
@@ -28,14 +28,14 @@ var stores =
             {
                 "type": "Feature",
                 "geometry": {
-                    "type": "Point",
+                    "type": "Taco",
                     "coordinates": [
                         -87.9363832,
                         43.0896164
                     ]
                 },
                 "properties": {
-                    "name": "Taco truck",
+                    "name": "Leon Tacos",
                     "phoneFormatted": "(202) 507-8357",
                     "phone": "2025078357",
                     "address": "2221 I St NW",
@@ -51,14 +51,14 @@ var stores =
             {
                 "type": "Feature",
                 "geometry": {
-                    "type": "Point",
+                    "type": "Neutral",
                     "coordinates": [
                         -87.9135968,
                         43.0712009
                     ]
                 },
                 "properties": {
-                    "name": "Taco truck",
+                    "name": "Jamaican Maican",
                     "phoneFormatted": "(202) 387-9338",
                     "phone": "2023879338",
                     "address": "1512 Connecticut Ave NW",
@@ -74,7 +74,7 @@ var stores =
             {
                 "type": "Feature",
                 "geometry": {
-                    "type": "Point",
+                    "type": "Zocalo",
                     "coordinates": [
                         -87.9177079,
                         43.0243749
@@ -97,7 +97,7 @@ var stores =
             {
                 "type": "Feature",
                 "geometry": {
-                    "type": "Point",
+                    "type": "Taco",
                     "coordinates": [
                         -87.9197065,
                         43.0064272
@@ -120,7 +120,7 @@ var stores =
             {
                 "type": "Feature",
                 "geometry": {
-                    "type": "Point",
+                    "type": "Eastern",
                     "coordinates": [
                         -87.9091101,
                         43.0383623
@@ -143,7 +143,7 @@ var stores =
             {
                 "type": "Feature",
                 "geometry": {
-                    "type": "Point",
+                    "type": "Burger",
                     "coordinates": [
                         -87.9090471,
                         43.0375919
@@ -166,7 +166,7 @@ var stores =
             {
                 "type": "Feature",
                 "geometry": {
-                    "type": "Point",
+                    "type": "Taco",
                     "coordinates": [
                         -87.9021355,
                         43.0389995
@@ -189,7 +189,7 @@ var stores =
             {
                 "type": "Feature",
                 "geometry": {
-                    "type": "Point",
+                    "type": "Taco",
                     "coordinates": [
                         -87.9119499,
                         43.0064735
