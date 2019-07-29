@@ -64,7 +64,7 @@ map.on("load", function() {
 
 
 
-map.addControl(new mapboxgl.NavigationControl());
+//map.addControl(new mapboxgl.NavigationControl());
 map.scrollZoom.disable();
 //map.addControl(new mapboxgl.FullscreenControl());
 
@@ -223,7 +223,7 @@ stores.features.forEach(function (marker) {
   // By default the image for your custom marker will be anchored
   // by its center. Adjust the position accordingly
   // Create the custom markers, set their position, and add to map
-  console.log(marker.geometry.type);
+
   if(marker.geometry.type=="Taco"){
     el.style.backgroundImage =  "url('images/taco-truck_42x42.png')";
   }else if(marker.geometry.type=="Burger"){
