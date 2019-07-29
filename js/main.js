@@ -210,6 +210,15 @@ function createPopUp(currentFeature) {
 
 //// Add an event listener for when a user clicks on the map
 stores.features.forEach(function (marker) {
+  var d = new Date();
+  console.log(d.getHours() + ":"+ d.getMinutes());
+  if(d.getHours() >=19){
+    var status = document.getElementById("status")
+    status.innerText = 'offline';
+    status.style.color = 'red';
+    return;
+  }
+
 
   var ob = [];
   ob.push(window.lng, window.lat);
@@ -223,6 +232,7 @@ stores.features.forEach(function (marker) {
   // By default the image for your custom marker will be anchored
   // by its center. Adjust the position accordingly
   // Create the custom markers, set their position, and add to map
+
 
   if(marker.geometry.type=="Taco"){
     el.style.backgroundImage =  "url('images/taco-truck_42x42.png')";
