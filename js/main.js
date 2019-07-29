@@ -229,9 +229,9 @@ stores.features.forEach(function (marker) {
   }else if(marker.geometry.type=="Burger"){
     el.style.backgroundImage = "url('images/burgertruck_42x42.png')";
   }else if(marker.geometry.type=="Eastern"){
-    el.style.backgroundImage = "url('images/falafel_42x42.png')";
+    el.style.backgroundImage = "url('images/falafel.png')";
   }else if(marker.geometry.type=="Zocalo"){
-    el.style.backgroundImage = "url('images/delivery_42x42.png')";
+    el.style.backgroundImage = "url('images/food-truck_zo_42x42.png')";
   } else{
     el.style.backgroundImage = "url('images/food-trucks_42x42.png')";
   }
