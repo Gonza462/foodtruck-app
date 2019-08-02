@@ -211,9 +211,10 @@ function createPopUp(currentFeature) {
 //// Add an event listener for when a user clicks on the map
 stores.features.forEach(function (marker) {
   var d = new Date();
-  console.log(d.getHours() + ":"+ d.getMinutes());
+  var status = document.getElementById("status");
+
   if(d.getHours() >=19){
-    var status = document.getElementById("status")
+
     status.innerText = 'offline';
     status.style.color = 'red';
     return;

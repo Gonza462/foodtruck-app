@@ -463,7 +463,57 @@ h1 { position: absolute; top: 100px; left: 100px; }
 
 
 
+body {
+  background-color: salmon;
+}
 
+.menu {
+  position: relative;
+  margin-top: 485px;
+  margin-left:315px;
+}
+
+.menu span {
+  position: absolute;
+  background-color: black;
+  padding: 7px 4px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu span.hidden {
+  visibility: hidden;
+}
+
+.menu span:last-child {
+  padding: 4px 5px;
+}
+
+.menu span:nth-child(1) {
+  background-color: #ffe000d1;
+  padding: 6px 13px;
+}
+
+.menu span:nth-child(1).show {
+  transform: rotate(-12deg) translate(-60px) rotate(12deg);
+}
+
+.menu span:nth-child(2) {
+  background-color: #f34e4e;
+}
+
+.menu span:nth-child(2).show {
+  transform: rotate(50deg) translate(-65px) rotate(-50deg);
+
+}
+
+.menu span:nth-child(3) {
+  background-color: rgb(117, 229, 49);
+}
+
+.menu span:nth-child(3).show {
+  transform: rotate(100deg) translate(-80px) rotate(-100deg);
+}
 
 
 
