@@ -25,11 +25,9 @@
     <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
     <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet/sass" type="text/sass" href="css/widget.sass" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
     <script src='https://unpkg.com/mapbox@1.0.0-beta9/dist/mapbox-sdk.min.js'></script>
-    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
-    <script src = "js/firebase.js"></script>
     <script src="js/backend.js"></script>
     <script src="js/jsonstores.js"></script>
     <script src="js/functions.js"></script>
@@ -44,20 +42,20 @@
     </div>
 </div>
 <div class = "encap" style="height: 0%; position: absolute; display: contents">
-    <i id ="by"> Food Truck MKE</i>
-    <a onclick="nightMode()"><img id = "nightmode" src="images/nightmode.png"></a>
-    <a href="instagram://user?username=lg_luiss"><img id="insta" alt = "" src="images/iconfinder_2018_social_media_popular_app_logo_instagram_3225191.png" style="width: 6%"></a>
-    <a href = "login.html" class="myButton">Log in</a>
+    <h1 id="status">online</h1>
+    <a href="instagram://user?username=lg_luiss"><img id="insta" src="images/iconfinder_2018_social_media_popular_app_logo_instagram_3225191.png"></a>
+    <img onclick="nightMode()" id = "nightmode" src="images/night.png">
     <div id="onmenu" style="background-color: #e83e2a"></div>
-    <div id='map' class='map pad2' style="background-color: rgba(0,0,0,0.94)">
+    <div id='map' class='map pad2' style="background-color: transparent">
         <i id="burger" class="material-icons" onclick="burger()" style="padding: 0px 0px 0vw 0vw">menu</i>
+
         <i id="quit" class="material-icons" onclick="quit()">back</i>
         <div id="links">
             <div class="amazing-menu">
                 <div class="menu-item">
                     <div class="container">
                         <div class="icon"><span class="ion-icecream"></span></div>
-                        <div class="title">jamaican truck </div>
+                        <div class="title">Jamaican Maican </div>
                         <div class="arrow"><span class="ion-chevron-right"></span></div>
                         <div class="rating -r2">
                             <div class="stars">
@@ -74,7 +72,7 @@
                 <div class="menu-item">
                     <div class="container">
                         <div class="icon"><span class="ion-pizza"></span></div>
-                        <div class="title">taco truck</div>
+                        <div class="title">El Tapatio</div>
                         <div class="arrow"><span class="ion-chevron-right"></span></div>
                         <div class="rating -r5">
                             <div class="stars">
@@ -134,7 +132,7 @@
                 <div class="menu-item">
                     <div class="container">
                         <div class="icon"><span class="ion-coffee"></span></div>
-                        <div class="title">test truck</div>
+                        <div class="title">Falafel Guys</div>
                         <div class="arrow"><span class="ion-chevron-right"></span></div>
                         <div class="rating -r2">
                             <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
@@ -145,7 +143,7 @@
                 <div class="menu-item">
                     <div class="container">
                         <div class="icon"><span class="ion-coffee"></span></div>
-                        <div class="title">test truck</div>
+                        <div class="title">Fatty Patty</div>
                         <div class="arrow"><span class="ion-chevron-right"></span></div>
                         <div class="rating -r2">
                             <div class="stars"><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span><span class="ion-star"></span></div>
@@ -156,17 +154,37 @@
             </div>
         </div>
     </div>
+    <div class="menu">
+        <span class="fa fa-info fa-2x fa-inverse f-fw hidden"></span>
+        <span id = "user" class="fa fa-user-o fa-2x fa-inverse fa-fw hidden"></span>
+        <span onclick="window.location='login.html'" class="fa fa-location-arrow fa-2x fa-inverse fa-fw hidden"></span>
+        <span class="fa fa-cog fa-2x fa-inverse f-fw"></span>
+    </div>
 </div>
 <script src = "js/main.js" charset="utf-8"></script>
 </body>
 </html>
 
-<script src="js/firebase.js"></script>
+
 <!--  <div class="popup">
 
       <span class="popuptext" id="myPopup"><a href="http://maps.google.com/maps?saddr=43.077457,-87.882252&daddr=43.090138,-87.976349"><button class="button">Go</button></a></span>
       <div id = "circtruck"><img src="Webp.net-resizeimage.png"></div>
-
-
   </div>
+
+      <i id ="by"> Food Truck MKE</i>
+    <a onclick="nightMode()"><img id = "nightmode" src="images/nightmode.png"></a>
+    <a href="instagram://user?username=lg_luiss"><img id="insta" alt = "" src="images/iconfinder_2018_social_media_popular_app_logo_instagram_3225191.png" style="width: 6%"></a>
+    <a href = "login.html" class="myButton">Log in</a>
+
+    circle menu
+    https://codepen.io/hadarweiss/pen/WvEXeK
+
+    https://redstapler.co/10-awesome-css-hamburger-menu/
+
+    https://codemyui.com/tag/hamburger-menu/page/2/
+
+
+    use this
+    https://codepen.io/reidark/pen/FEueH
   -->

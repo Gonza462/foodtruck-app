@@ -50,8 +50,7 @@ var pubnub = new PubNub({
 
 pubnub.subscribe({channels: [pnChannel]});
 pubnub.addListener({message:redraw});
-console.log(window.lng);
-console.log(window.lat);
+
 
 setInterval(function() {
     pubnub.publish({channel:pnChannel, message:currentLocation()});
