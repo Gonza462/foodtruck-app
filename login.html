@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Login Form</title>
-
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
 
@@ -84,13 +85,13 @@
     <form method="post">
         <input type="text" name="u" placeholder="Username" required="required" />
         <input type="password" name="p" placeholder="Password" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">Update</button>
+        <button id = "update" onclick ="updateStores()" type="submit" class="btn btn-primary btn-block btn-large">Update</button>
     </form>
 </div>
 
 
 
-<script  src="./truckscript.js"></script>
+<script  src="js/firebase.js"></script>
 
 
 
