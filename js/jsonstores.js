@@ -1,8 +1,3 @@
-
-
-
-
-
 var stores =
 {
     "type": "FeatureCollection",
@@ -202,6 +197,29 @@ var stores =
             },
             "properties": {
                 "name": "La Guacamaya",
+                "phoneFormatted": "(202) 337-9338",
+                "phone": "2023379338",
+                "address": "3333 M St NW",
+                "city": "Washington DC",
+                "lat": "-87.9119499",
+                "long": "43.0064735",
+                "country": "United States",
+                "crossStreet": "at 34th St NW",
+                "postalCode": "20007",
+                "state": "D.C."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Taco",
+                "coordinates": [
+                    -88.0309163,
+                    43.1793134
+                ]
+            },
+            "properties": {
+                "name": "Taco Feliz",
                 "phoneFormatted": "(202) 337-9338",
                 "phone": "2023379338",
                 "address": "3333 M St NW",

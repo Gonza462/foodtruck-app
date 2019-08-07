@@ -16,22 +16,17 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
-
-
-
 function updateStores(){
 
     //get from database
-    //var fire = firebase.database().ref().child("Users").child("Location");
-    var fire = firebase.database().ref().child("Users");
-
-
+    var fire = firebase.database().ref().child("Users").push().key;
+    //var fire = firebase.database().ref().child("Users");
     console.log(fire);
-    fire.push().set("69.2222,333.22222");
+   // fire.push().set("69.2222,333.22222");
 
-    var r = firebase.database();
-    var ref = database.ref('Users');
-    ref.on('Value',gotData,errData);
+   // var ref = firebase.database();
+    // ref = database.ref().child("Users");
+   // ref.on('Value',gotData,errData);
     //console.log(stores.features[0]);
 
 
