@@ -470,18 +470,6 @@ stores.features.forEach(function (marker) {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 function burger(){
   var burger = document.getElementById('burger');
   var links = document.getElementById('links');
