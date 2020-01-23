@@ -1,0 +1,20 @@
+{
+  "name": "foodtruckmke",
+  "version": "1.0.0",
+  "description": "www.FoodTruckMKE.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gonza462/foodtruckmke.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gonza462/foodtruckmke/issues"
+  },
+  "homepage": "https://github.com/Gonza462/foodtruckmke#readme"
+}
